@@ -1,0 +1,116 @@
+/* CSS Document */
+
+/* Level 1 Units  */
+
+#level_1 ul.building { width: 450px; height: 85px; margin: 0 auto; }
+
+#level_1 li.recruit_comm { width: 300px;  text-align: center; }
+#level_1 li.recruit_comm  p { font-size: .8em; margin: 15px 15px; padding: 0; }
+
+
+/* *************************************************************************************************** */
+
+/* Toxotae Spear Militia Baltic Spearmen  */
+
+#two_build ul.building { width: 700px; height: 85px; margin: 0 auto; }
+#two_build ul.building li { float: left; height: 85px; padding: 5px; }
+#two_build ul.building li.pic { padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: .6em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+
+#two_build .building img { display:block; padding: 0; margin: 0 auto; }
+
+#two_build li.arrow  { width: 38px; padding: 0; margin-top: 20px}
+#two_build li.recruit_comm { width: 400px;  text-align: center; }
+#two_build li.recruit_comm  p { font-size: .8em; margin-top: 20px; padding: 0; margin-right: 25px; }
+
+/* for two-builds with 3 levels */
+#two_build li.recruit_comm_3 { width: 300px;  text-align: center; }
+#two_build li.recruit_comm_3  p { font-size: .8em; margin-top: 20px; padding: 0; margin-right: 25px; }
+
+#two_build li.recruit_comm_long { width: 320px;  text-align: center; }
+#two_build li.recruit_comm_long  p { font-size: .8em; margin: 5px; padding: 0; }
+
+#two_build ul.building2 { width: 660px; height: 85px; margin: 0 auto; }
+#two_build ul.building2 li { float: left; height: 85px; padding: 5px; }
+#two_build ul.building2 li.pic { padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: .6em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+
+#toxotae .building2 img { display:block; padding: 0; margin: 0 auto; }
+
+
+#toxotae li.recruit_comm2 { width: 400px;  text-align: center; }
+#toxotae li.recruit_comm2  p { font-size: .8em; margin-top: 20px; padding: 0; margin-right: 25px; }
+
+
+#behk ul.building { width: 100%; height: 85px; margin: 0 0 0 10px; }
+#behk ul.building li { float: left; height: 85px; padding: 5px; }
+#behk ul.building li.pic { padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: .6em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+
+#behk .building img { display:block; padding: 0; margin: 0 auto; }
+
+#behk li.arrow  { width: 34px; padding: 0; margin-top: 20px}
+#behk li.recruit_comm { width: 400px;  text-align: center; }
+#behk li.recruit_comm  p { font-size: .8em; margin-top: 20px; padding: 0; margin-right: 25px; }
+
+#behk ul.building2 { width: 100%; height: 85px; margin: 0 0 0 10px; }
+#behk ul.building2 li.push_left { float: left; height: 85px; padding: 5px; margin-left: -125px; }
+#behk ul.building2 li { float: left; height: 85px; padding: 5px; }
+#behk ul.building2 li.pic { padding: 0 0 0 0;
+                     width:80px; height: 75px; 
+					 font: .6em/1.2em Arial, Helvetica, sans-serif;
+					  }
+					 
+#behk li.recruit_comm2 { width: 360px;  text-align: center; }
+#behk li.recruit_comm2  p { font-size: .8em; margin: 20px 10px 0 20px; }
+
+/* Scottish Urban Militia  */
+
+#level_3 ul.building { width: 700px; height: 100px; margin: 0 auto; }
+#level_3 ul.building li { float: left; height: 85px; }
+#level_3 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+#level_3 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_3 li.arrow  { width: 38px; padding: 0; margin-top: 20px}
+#level_3 li.recruit_comm { width: 300px;  text-align: center; }
+#level_3 li.recruit_comm  p { font-size: .8em; margin: 5px 10px; padding: 0; }
+
+/* Level 4 Units Special -- Noble Foot Knights, Halberd MAA  */
+
+#level_4 ul.building { width: 760px; height: 85px; margin: 0 auto; }
+#level_4 ul.building li { float: left; height: 85px; }
+#level_4 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+#level_4 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_4 li.arrow  { width: 38px; padding: 0; margin-top: 20px}
+#level_4 li.recruit_comm { width: 250px;  text-align: center; }
+#level_4 li.recruit_comm  p { font-size: .8em; margin: 5px 5px; padding: 0; }
+
+					  

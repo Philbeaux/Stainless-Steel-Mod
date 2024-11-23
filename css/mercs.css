@@ -1,0 +1,375 @@
+body {
+	font-family: Arial,sans-serif;
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+	background: #fff url(../images/bg_grad.jpg) fixed;
+}
+
+#wrapper { width: 1000px; margin: 0 auto; }
+
+hr { margin-bottom: 2px; color:#000; }
+
+
+ul, li { list-style: none; padding: 0; margin: 0; }
+
+H2 { margin: 5px 0 5px 0; }
+
+img {
+vertical-align: bottom; /*to remove gap under images if left inline*/
+border: 0;
+padding: 0;
+}
+
+span { margin: 0; padding: 0;}
+
+a { text-decoration: none; }
+
+
+/********* form and related tag styles *********/
+
+#masthead form { float: right; margin-top: -30px; }
+
+/******************Search Box ******************/
+
+#search_box { 
+			  left: 4px;
+			  top: 2px;
+			  margin: 0;
+			  padding: 6px 2px;
+			  }
+
+#search_box form {
+              position: relative; left: 0; top: 0; padding: 3px;
+			  }
+#search_box p { font: bold italic .9em/1em Verdana, Arial, Helvetica, sans-serif; margin: 10px 0 1px 2px; padding-bottom: 1px; }			  
+ 
+
+
+
+label {
+ font: bold 1em Arial,sans-serif;
+ color: #334d55; 
+}
+	
+select { width: 180px; }	
+				
+input{
+font-family: Arial,sans-serif;
+}
+
+/***********************************************/
+/* Layout Divs                                 */
+/***********************************************/
+#pagecell1 {
+	position: relative;
+	top: 5px;
+	width:1000px;
+	background-color: #ffffff;
+	border: 2px solid #000;
+	margin-bottom: 6px;
+}
+
+/***********************************************/
+/* Google Ad Headers                             */
+/***********************************************/
+
+.head_ad {          
+		  margin: 10px 0 0 140px;
+		 }
+
+
+#ad_head { margin: 10px 0 0 140px; }
+
+
+#masthead { top: 10px; }
+
+#masthead img { padding-right: 20px; display: inline;}
+
+
+#pageNav {
+	float: left;
+	width:246px;
+	padding: 0px;
+	background-color: #fff;
+	border-right: 1px solid #000;
+	font: small Verdana,sans-serif;
+}
+
+#content{
+	padding: 0;
+	margin: 0px 0px 0px 246px;
+	border-left: 1px solid #000;
+}
+
+
+
+
+
+/************** feature styles *****************/
+
+.feature {
+	padding: 0px 0px 50px 10px;
+	display: block;
+	}
+
+.feature img {
+	float: left;
+	padding: 10px 30px 25px 30px;
+	width: 432px;
+	height: 172px;
+}
+
+
+.feature img.tall {
+	float: left;
+	padding: 10px 30px 10px 30px;
+	width: 191px;
+	height: 280px;
+}
+
+/*
+.feature_tall { padding: 0px 0px 60px 10px; }
+.feature_tall img { 
+    float: left;
+	padding: 10px 30px 10px 30px;
+	width: 191px;
+	height: 280px;
+	}
+*/
+
+
+.feature p { font: bold 72%/1.3em Arial, Helvetica, sans-serif;
+             padding: 0px;
+			 margin: 0;
+			 } 
+.feature p.top_space { margin-top: 5px; }			 
+
+
+
+
+/*************** story styles ******************/
+
+.story {
+	padding: 10px 5px 0px 10px;
+	}
+
+.story p { font: 1em/1.3em Arial, Helvetica, sans-serif; }
+	
+
+
+.story img { padding-right: 8px; margin-left: 2px; border: none; float: left; }
+
+
+/************** siteInfo styles ****************/
+
+#siteInfo{
+	clear: both;
+	border-top: 1px solid #cccccc;
+	padding: 10px 10px 10px 10px;
+	margin-top: 0px;
+}
+
+#siteInfo a { font-size: small;	color: #000; }
+#siteInfo a:hover { color: #FF0000; }
+
+#footer {	
+	margin: 10px 0 10px 20px;
+	padding-top: 10px;
+	text-align: center;
+	}
+	
+#footer a { font: 14px geneva, verdana, arial, helvetica, sans-serif; color: #000; }
+	
+#footer a:hover { color:#FF0000; }	
+
+/************ sectionLinks styles **************/
+
+#sectionLinks {
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#sectionLinks a:link, #sectionLinks a:visited {
+	display: block;
+	border-top: 0px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #f6d478;
+	font-weight: bold;
+	padding: 3px 0px 3px 10px;
+	color: #000;
+}
+
+#sectionLinks a:hover{
+	color: #00CCFF;
+	background-color: #f6d478; 
+	background-image: none;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/************ sectionLinks styles Moors Link **************/
+
+#sectionLinks.doa {
+	margin: 0px;
+	padding: 0px;
+	
+
+}
+
+a.doa  { text-align: center; }
+a.doa p { margin: 0 0 0 -25px;}
+
+/**************** advert styles *****************/
+
+#advert {
+    float: left;
+	margin: 10px auto;
+	width: 246px;
+	text-align: center;
+	font-size: 2em;
+	
+}
+
+#advert img {
+	border: none;
+}
+
+#advert a { border: none; }
+
+/* Unit Type Hovers */
+
+ a.ut { position: relative; text-decoration: underline; color: #000; border-bottom: 1px double #000; }
+ a.ut span { display: none; }	
+ a.ut:hover span { display: block; position: absolute; top: 2em; left: -2em; padding: 2px; border: 1px double #000; color: #000; background-color:#D5C2A2; width: 23em; } 
+ 
+ 
+/********************* Mercenary Units ******************************/
+
+p#merc_comm  { font-size: .9em; font-style: italic; width: 80%; text-align: center; }
+
+
+#navlist {
+padding: 0 1px 1px;
+margin-left: 0;
+margin-bottom: 0;
+font: bold 12px Verdana, sans-serif;
+height: 300px;
+float: left;
+position: relative;
+top: 0px;
+left: -5px;
+width: 230px;
+ }
+ 
+ #navlist h2 { color: #fff; }
+
+
+
+#navlist li {
+list-style: none;
+margin: 3px 0 0 10px;
+display: block;
+position: relative;
+top: 0px;
+left: 3px;
+width: 156px;
+text-align: center;
+font-style: italic;
+}
+
+#navlist li a {
+font: bold 1.1em/1.4em Arial, Helvetica, sans-serif;
+background: #fff;
+text-decoration: none;
+ }
+ 
+ #long #navlist li a {
+font: bold 1em/1.1em Arial, Helvetica, sans-serif;
+background: #fff;
+text-decoration: none;
+ }
+
+#navlist li a:link { color: #000; }
+#navlist li a:visited { color: #000; }
+#navlist li a:hover {
+	color: #ff0000;
+	visibility: visible; }
+
+#navlist li a span {
+visibility:hidden;
+display:block;
+position: absolute;
+top: 0px;
+color:#000;
+width: 411px;
+height: 250px;
+
+}
+
+
+
+#defaultImage {
+visibility:visible;
+display:block;
+position: absolute;
+margin: 0 0 0 200px;
+width: 411px;
+height: 250px;
+background-image:url(../Mercs/images/regions/base.jpg) ;
+}
+
+
+
+#navlist li a:hover span {
+	visibility:visible;
+    background-image:url(../Mercs/images/regions/rollover_16_BIG.png) ;
+    top: -20px; left: 191px;
+	display: block;
+	}
+	
+	
+
+
+
+#navlist li a:hover span#scot { background-position: 0 0; }
+#navlist li a:hover span#ire  { background-position: 0 -250px;   }
+#navlist li a:hover span#wales { background-position: 0 -500px;   }
+#navlist li a:hover span#n_germany { background-position: 0 -750px; }
+#navlist li a:hover span#s_germany { background-position: 0 -1000px; }
+#navlist li a:hover span#n_italy { background-position: 0 -1250px;  }
+#navlist li a:hover span#switz { background-position: 0 -1500px;  }
+#navlist li a:hover span#pyrenaes { background-position: -411px 0; }
+#navlist li a:hover span#e_balkans { background-position: -411px -250px; }
+#navlist li a:hover span#e_greece { background-position: -411px -500px; }
+#navlist li a:hover span#anatolia { background-position: -411px -750px; }
+#navlist li a:hover span#levant { background-position: -411px -1000px; }
+#navlist li a:hover span#armenia{ background-position: -411px -1250px; }
+#navlist li a:hover span#w_greece { background-position: -411px -1500px; }
+#navlist li a:hover span#w_balkans { background-position: -822px 0; }
+#navlist li a:hover span#burgundy { background-position: -822px -250px; }
+#navlist li a:hover span#sardinia { background-position: -822px -500px; }
+#navlist li a:hover span#france { background-position: -822px -750px; }
+#navlist li a:hover span#steppes { background-position: -822px -1000px; }
+#navlist li a:hover span#se_steppes { background-position: -822px -1250px; }
+#navlist li a:hover span#sicily { background-position: -822px -1500px; }
+#navlist li a:hover span#n_africa { background-position: -1233px 0; }
+#navlist li a:hover span#ne_africa { background-position: -1233px -250px; }
+#navlist li a:hover span#nubia { background-position: -1233px -500px; }
+#navlist li a:hover span#egypt { background-position: -1233px -750px; }
+#navlist li a:hover span#spain { background-position: -1233px -1000px; }
+#navlist li a:hover span#scan { background-position: -1233px -1250px; }
+#navlist li a:hover span#norway { background-position: -1233px -1500px; }
+#navlist li a:hover span#netherlands { background-position: -1644px 0; }
+#navlist li a:hover span#russia { background-position: -1644px -250px; }
+#navlist li a:hover span#poland { background-position: -1644px -500px; }
+#navlist li a:hover span#prussia { background-position: -1644px -750px; }
+#navlist li a:hover span#arabia { background-position: -1644px -1000px; }
+#navlist li a:hover span#persia { background-position: -1644px -1250px; }
+#navlist li a:hover span#sw_persia { background-position: -1644px -1500px; }
+
+
+.small { font-size: .95em;
+         font-style: italic;
+		 } 

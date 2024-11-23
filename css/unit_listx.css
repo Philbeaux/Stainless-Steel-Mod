@@ -1,0 +1,180 @@
+/* CSS Document */
+
+body { margin: 0 auto; background-image:url(../photo_2.jpg);
+       font-family: times,Times New Roman,times-roman,georgia,serif;
+       }
+
+
+a { margin: 0; padding: 0; border: 0; text-decoration: none; color: #000;  }
+a:hover { color: #CC0000;  }
+a img { border: none; }
+ul { display: block; }
+li { list-style: none; display: inline; margin: 0; padding: 0; float: left;  }
+p { margin: 0 0 2px 0; padding: 2px; font: .8em times,Times New Roman,times-roman,georgia,serif; display: block; }
+p.small { font-size: .62em; }
+span { font: .7em Arial, Helvetica, sans-serif; z-index: 1; }
+span.small { font-size: .6em; }
+
+#wrapper { 
+margin: 20px auto;
+padding: 4px;
+width: 900px;
+background-image:url(../images/parchment1.jpg);
+border: 2px solid #000;
+}
+ 
+#header { text-align: center; margin: 6px auto; } 	   
+
+#units h1 { 
+       display: block;
+	   width: 100%;
+	   height: 40px;
+	   margin: 10px 0;
+	   border-bottom: 1px solid #000; 
+	   clear: both;
+	    }
+#units {  }
+#units ul { width: 900px; margin: 0 auto; padding: 6px 0; }
+#units li { float: left; width: 90px; height: 100px; text-align: center; padding: 4px 0;  }
+ul#units li.p { padding-bottom: 4px; }
+
+ul#units li p.small { font: .62em/1em normal Geneva, Arial, Helvetica, sans-serif; }
+
+
+ul#pics {
+    height: 120px;
+    margin: 20px auto;	
+    width: 360px;
+	}
+
+
+#pics li { float: left; width: 90px; height: 100px; text-align: center; }
+
+
+#left_block {
+                float: left;
+				display: block; 
+				width: 300px;
+				margin: 20px 0px 10px 20px;
+				padding: 0;
+				background-color: #CFCFC7;
+				border: 1px solid #000; 
+				}
+				
+			
+				
+
+ ul#nav {
+                 width: 300px;
+				 margin: 0;
+				 padding: 0;
+				 
+				 }
+				 
+ ul#nav li
+                 { 
+                        display: block;
+                        width: 300px;
+						height: 26px;
+				        border-bottom: 1px solid #000; 
+						text-align: left;
+						padding: 2px 0;
+						 }	
+						
+					
+ul#nav li.top  { height: 1px; }						 			 				
+				
+#nav li a    {     font-family: times,Times New Roman,times-roman,georgia,serif;
+                   font-size: 12px;
+				   font-weight: bold;
+                   letter-spacing: 1px;
+                   line-height: 16px;
+                   margin: 0;
+                   padding: 3px;
+                   width: 300px; 
+				   }	
+				  
+#left_block a:hover { color: #FFFFFF; background-color:#666666; }
+#left_block li:hover { color: #FFFFFF; background-color:#666666; }
+#left_block li.last { border: none; padding: 2px 0 0 0; }
+
+ #ad_350x250 {
+               
+               width: 300px;
+			   height: 250px;
+			   padding: 0;
+			   border-bottom: 2px solid #000;
+			   background-image: url(../images/grey02.jpg)
+			   } 
+
+#footer { width: 98%; height: 85px; text-align: center; margin-top: 20px; border-top: 3px solid #000; background-image: url(../images/footer_back.gif); background-repeat: repeat-x; }
+#footer a { font: 1em/1em Helvetica, sans-serif; padding: 4px; color: #FFFF00; }
+#footer a:hover { text-decoration: underline; color: #FFFFFF; }
+
+
+
+#mercs #wrapper { height: 9360px; }
+#mercs #units   { height: 9346px; }
+
+/**************** Mercs Menu ***********************/
+
+#mercs ul { float: left; padding: 0; margin: 0 auto; }
+#mercs h1 { margin: 10px; padding: 0; }
+#mercs li { height: 120px; }
+
+#ad_head { 
+          text-align: center;
+		  width: 98%;
+		  margin: 10px auto;
+		   }
+		   
+#ad_bottom {
+             text-align: center;
+		  width: 100%;
+		  margin: 10px auto;
+		  }		   
+		   
+/***************** Misc  *****************************/
+
+#units ul#cemter_1   {  margin-left: 280px; width: 80px; }
+#units ul.cemter_3   {  margin: 0 auto; width: 280px; }
+#units ul.center_4   {  margin: 0 auto; width: 360px; height: 100px; }	
+#units ul.center_5  {  margin: 0 auto; width: 400px; }
+#units ul.center_8  {  margin: 0 auto; width: 730px; height: 100px; }
+#units ul.center li { margin: 0 auto; }
+
+.l_40  { margin-left: 40px; }
+.l_80  { margin-left: 80px; }
+.l_120 { margin-left: 120px; }
+.l_160 { margin-left: 160px; }
+.l_180 { margin-left: 180px; }
+.l_200 { margin-left: 200px; }
+.l_210 { margin-left: 210px; }
+.l_240 { margin-left: 240px; }
+.l_280 { margin-left: 280px; }	   
+
+ #fact_strip { 
+                width: 999px;
+                margin-left: 4px;
+				text-align: left;
+				
+				}
+
+ a.tt { position: relative; }
+ a.tt span { display: none; }	
+ a.tt:hover span { display: block; position: absolute; top: 1.5em; left: 0; padding: 3px; border: 1px solid #000; color: #000; background-color:#D5C2A2; text-align: center; } 
+ a.tt:hover span.small { display: block; position: absolute; top: .5em; left: 4em; padding: 1px; border: 1px solid #000; color: #000; background-color:#D5C2A2;
+ }
+ .tt img { height: 33px; width: 33px; padding: 0; }		
+ 
+ a.ven { position: relative; }
+ a.ven span { display: none; }	
+ a.ven:hover span { display: block; position: absolute; top: 1.5em; left: -.8em; padding: 3px; border: 1px solid #000; color: #000; background-color:#D5C2A2; text-align: center; } 
+ a.ven:hover span.small { display: block; position: absolute; top: .5em; left: 4em; padding: 1px; border: 1px solid #000; color: #000; background-color:#D5C2A2;
+ }
+ .ven img { height: 33px; width: 33px; padding: 0; }		
+ 
+
+	 
+h1.arty_back { background: url(../images/common/arty_units.png) no-repeat 20px 0;  }
+h1.naval_back { background: url(../images/common/naval_units.png) no-repeat 40px 0;  }	 		

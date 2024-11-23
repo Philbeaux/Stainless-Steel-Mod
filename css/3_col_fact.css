@@ -1,0 +1,196 @@
+/* CSS Document */
+
+body { text-align: center; margin: 0 auto; background-image: url(../images/texture_2.jpg) }
+
+#header h1 { text-align: center; font: 3em/1.5em "Times New Roman", Times, serif; margin: 10px 0;   }
+
+a { margin: 0; padding: 0; border: 0; text-decoration: none; color: #000;  }
+a:hover { color: #CC0000;  }
+a img { border: none; }
+ul { display: block; }
+li { list-style: none;  text-align: center; display: inline; margin: 0; padding: 0; }
+p { margin: 0 0 2px 0; padding: 2px; font: .72em Arial, Helvetica, sans-serif; display: block; }
+p.small { font-size: .62em; }
+span { font: .7em Arial, Helvetica, sans-serif; z-index: 1; }
+span.small { font-size: .6em; }
+
+#wrapper { 
+margin: 0 auto; 
+width: 900px; 
+height: 420px;
+border: 2px solid #000; 
+text-align: center; 
+background-image:url(../images/parchment1.jpg);
+ }
+ 
+ a.tt { position: relative; }
+ a.tt span { display: none; }	
+ a.tt:hover span { display: block; position: absolute; top: .5em; left: 2.5em; padding: 1px; border: 1px solid #000; color: #000; background-color:#D5C2A2; } 
+ a.tt:hover span.small { display: block; position: absolute; top: .5em; left: 4em; padding: 1px; border: 1px solid #000; color: #000; background-color:#D5C2A2; }   
+ 
+ 	   
+#left img { width: 52px; height: 52px; }
+#left { float: left; width: 110px; height: 600px; padding: 1em 0 0 .5em;}
+
+#right img { width: 52px; height: 52px; }
+#right { float: right; width: 110px; height: 600px; padding: 1em .5em 0 0;}
+
+
+#units { width: 650px; margin-left: 7.5em; border-left: 2px solid #000; border-right: 2px solid #000; padding-left: 5px; padding-top: 5px; }
+#units ul { width: 650px;  }
+#units li { float: left; width: 80px; height: 100px; }
+ul#units li.p { padding-bottom: 2px; }
+
+ul#units li p.small { font: .62em/1em normal Geneva, Arial, Helvetica, sans-serif; }
+#footer { width: 100%; text-align: center; margin-top: 40px; padding: 10px; border-top: 3px solid #000; background-image: url(../images/footer_back.gif) }
+#footer a { font: 1.32em/1.5em Helvetica, sans-serif; padding: 4px; color: #FFFF00; }
+#footer a:hover { text-decoration: underline; color: #FFFFFF; }
+
+#aragon #wrapper {height: 720px; }
+#aragon #units { height: 706px; }
+#aragon #left {height: 720px; }
+#aragon #right {height: 720px; }
+
+#byz #wrapper {height: 570px; }
+#byz #units { height: 556px; }
+#byz #left, #right { height: 570px; }
+
+#cuman #wrapper { height: 450px; }
+#cuman #units { height: 436px; }
+#cuman #left  { height: 450px; }
+#cuman #right { height: 450px; }
+
+#kwaz #wrapper {height: 520px; }
+#kwaz #units { height: 506px; }
+#kwaz #left {height: 520px; }
+#kwaz #right {height: 520px; }
+
+#dane #wrapper { height: 748px; }
+#dane #units   { height: 744px; }
+#dane #left   { height: 744px; }
+#dane #right   { height: 744px; }
+
+#egypt #wrapper { height: 560px; }
+#egypt #units   { height: 556px; }
+#egypt #right   { height: 556px; }
+#egypt #left   { height: 556px; }
+
+
+#england #wrapper { height: 728px; }
+#england #units   { height: 724px; }
+#england #left   { height: 724px; }
+#england #right  { height: 724px; }
+
+#france #wrapper { height: 710px; }
+#france #units { height: 716px; }
+#france #left { height: 710px; }
+#france #right { height: 710px; }
+
+#hre #wrapper { height: 830px; }
+#hre #units { height: 826px; }
+#hre #right { height: 826px; }
+#hre #left { height: 826px; }
+
+#hung #wrapper { height: 624px; }
+#hung #units { height: 620px; }
+#hung #right { height: 620px; }
+#hung #left { height: 620px; }
+
+
+#jeru #wrapper { height: 640px; }
+#jeru #units { height: 636px; }
+#jeru #right { height: 640px; }
+#jeru #left { height: 640px; }
+
+
+
+#lith #wrapper { height: 450px; }
+#lith #units { height: 446px; }
+
+
+#kiev #wrapper { height: 550px; }
+#kiev #units { height: 536px; }
+#kiev #left  { height: 550px; }
+#kiev #right { height: 550px; }
+
+#milan #wrapper { height: 650px; }
+#milan #units { height: 620px; }
+#milan #left  { height: 650px; }
+#milan #right { height: 650px; }
+
+#mon #wrapper { height: 440px; }
+#mon #units { height: 426px; }
+
+#moors #wrapper { height: 560px; }
+#moors #units { height: 546px; }
+#moors #left { height: 560px; }
+#moors #right { height: 560px; }
+
+#nor #wrapper { height: 650px; }
+#nor #units { height: 636px; }
+#nor #left { height: 650px; }
+#nor #right { height: 650px; }
+
+#nov #wrapper { height: 610px; }
+#nov #units { height: 598px; }
+#nov #left { height: 610px; }
+#nov #right{ height: 610px; }
+
+#poland #wrapper { height: 634px; }
+#poland #units { height: 620px; }
+#poland #left { height: 634px; }
+#poland #right { height: 634px; }
+
+#port #wrapper { height: 740px; }
+#port #units { height: 726px; }
+#port #left { height: 740px; }
+#port #right { height: 740px; }
+
+#scot #wrapper {height: 525px; }
+#scot #units { height: 511px; }
+#scot #left {height: 525px; }
+#scot #right {height: 525px; }
+
+
+#sicily #wrapper {height: 640px; }
+#sicily #units { height: 626px; }
+#sicily #left {height: 640px; }
+#sicily #right {height: 640px; }
+
+#spain #wrapper { height: 734px; }
+#spain #units { height: 720px; }
+#spain #left { height: 734px; }
+#spain #right { height: 734px; }
+
+#teut #wrapper { height: 534px; }
+#teut #units { height: 520px; }
+#teut #left { height: 534px; }
+#teut #left { height: 534px; }
+
+#turks #wrapper { height: 534px; }
+#turks #units { height: 520px; }
+#turks #left { height: 534px; }
+#turks #right { height: 534px; }
+
+#venice #wrapper { height: 734px; }
+#venice #units { height: 730px; }
+#venice #left { height: 734px; }
+#venice #right { height: 734px; }
+
+
+#mercs #wrapper { height: 9460px; }
+#mercs #units   { height: 9346px; }
+
+
+
+/**************** Mercs Menu ***********************/
+
+#mercs ul { float: left; padding: 0; margin: 0 auto; }
+#mercs h1 { margin: 10px; padding: 0; }
+#mercs li { height: 120px; }
+
+#ad_head { 
+          text-align: center;
+		  width: 98%;
+		  margin: 10px auto;
+		   }

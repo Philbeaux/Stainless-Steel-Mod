@@ -1,0 +1,124 @@
+body {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  color: #000;
+  background-color: #fff;
+}
+
+
+h1 { text-align: center; }
+
+a { margin: 0; padding: 0; border: 0; text-decoration: underline; color: #000;}
+a:hover { color: #CC0000; }
+a img { border: none; }
+ul , li { list-style: none;  text-align: center; display: inline; margin: 0; padding: 0; }
+p { 
+margin: 0; 
+padding: 0; 
+font-size: .86em;
+font-family: Arial, Helvetica, sans-serif; 
+line-height: 1.5em; 
+text-align: left;
+ }
+
+
+#ad_head { 
+          text-align: center;
+		  width: 98%;
+		  margin: 10px auto;
+		   } 
+#wrapper {
+  margin: 0 auto;
+	width: 1000px;
+	
+ }
+ 
+ #header { margin: 5px auto; }
+ 
+#left_col {
+            margin: 20px 0 0 0;
+			width: 100%;
+			 }
+
+#intro_top {
+        font-family: Times New Roman, times-roman, georgia, serif;
+		font-size: 40px;
+	        line-height: 60px;
+	        letter-spacing: -1px;
+		color: #444;
+		margin: 0 auto;
+		padding: 0 0 0 0;
+                font-weight: 100; }
+				
+#intro_ad { text-align: center; margin: 28px 0 10px 30px; }
+ 
+ 
+ .completed { 
+ text-align: left;
+ width: 90%;
+ margin-left: 10px;
+ font: italic .75em/1.2em geneva, verdana, arial, helvetica, sans-serif; }
+ 
+ .completed a { font: italic 1em/1.2em geneva, verdana, arial, helvetica, sans-serif; }
+ .completed a:hover { color: red; }
+ 
+ 
+ 
+ 
+ .sep { width: 99%; font-size: 1.2em; color: #000; margin: 0; padding: 4px; }
+ 
+ 
+ .headline {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:20px;
+	    margin-top: 15px; margin-bottom: 5px;
+	    text-align: left;
+        font-weight: normal;
+        color: #222;
+		text-decoration: underline;
+		}
+		
+		.headline_plus {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:24px;
+	    margin: 2px 2px 2px 5px;
+	    text-align: left;
+        font-weight: normal;
+        color: #222;
+		text-decoration: underline;
+		}
+
+ 
+ 
+ 
+ #units {   width: 430px; 
+	        height: 660px;
+			background-image: url(../images/factback.png); 
+	        border: 2px solid #000;
+			float: right;
+			}
+ 
+
+#units ul { text-align: center;	}
+	
+#units ul li { float: left; width: 80px; height: 100px; margin: 3px; display:inline; }
+#units ul li p { margin: 0; padding: 0; font: .72em Arial, Helvetica, sans-serif; line-height: 1.4em; text-align: center; }
+#units ul li p.small { font-size: .60em; line-height: 1em; }
+#footer {
+    position: relative;
+	font: 10px geneva, verdana, arial, helvetica, sans-serif;
+	margin: 20px auto;
+	padding-top: 10px;
+	text-align: center;
+}
+		
+		
+		#note { width: 550px; text-align: center; margin: 0 0 0 120px; }
+		#note a { font: bold 1em/1em geneva, verdana, arial, helvetica, sans-serif; text-decoration: none; }  
+			  
+			 
+			  
+#ad {  width: 412px; height: 293px;  float: right; margin-right: 80px; margin-top: 20px; } 
+			  

@@ -1,0 +1,50 @@
+/* CSS Document */
+
+body { text-align: center; margin: 0 auto; background-image: url(../images/texture_2.jpg) }
+
+#header h1 { text-align: center; font: 3em/1.5em "Times New Roman", Times, serif; margin: 10px 0;   }
+
+a { margin: 0; padding: 0; border: 0; text-decoration: none; color: #000;  }
+a:hover { color: #CC0000;  }
+a img { border: none; }
+ul , li { list-style: none;  text-align: center; display: inline; margin: 0; padding: 0; }
+p { margin: 0; padding: 0; font: .72em Arial, Helvetica, sans-serif; }
+p.small { font-size: .62em; }
+
+
+#wrapper { 
+margin: 0 auto; 
+width: 800px; 
+height: 432px; 
+border: 2px solid #000; 
+text-align: center; 
+background-color:#CCCCCC;
+background-image: url(../images/parchment1.jpg) 
+ }
+
+
+#france #wrapper { height: 550px; }
+#scot #wrapper { height: 350px; }
+#byz #wrapper { height: 330px; }
+#hre #wrapper { height: 550px; }
+#turk #wrapper { height: 350px; }
+#lith #wrapper { height: 340px; }
+#lith p { font-size: .62em; }
+#moors #wrapper { height: 335px; }
+#nov #wrapper { height: 425px; }
+#cuman #wrapper { height: 230px; }
+#milan #wrapper { height: 450px; }
+#egypt #wrapper { height: 350px; }
+#kiev #wrapper {height: 445px; }
+#spain #wrapper { height: 550px; }
+#venice #wrapper { height: 540px; }
+#kwarz #wrapper { height: 330px; }
+#port #wrapper {height: 525px; }
+#danemark #wrapper { height: 535px; }
+
+ul#units { width: 780px; }
+ul#units li { float: left; width: 80px; height: 100px; margin: 4px; }
+
+#footer { width: 100%; text-align: center; margin: 0; padding: 0; }
+#footer a { font: 1em/1em "Times New Roman", Times, serif; background-color: #D8C3A4; padding: 3px; }
+#footer a:hover { text-decoration: underline; }

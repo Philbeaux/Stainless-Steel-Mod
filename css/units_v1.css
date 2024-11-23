@@ -1,0 +1,488 @@
+/***********************************************/
+/*   units_v_1.css --- created a header ad                          */
+/*         */
+/***********************************************/
+
+
+body {
+	font-family: Arial,sans-serif;
+	color: #000;
+	padding: 0px;
+	background: #fff url(../images/bg_grad.jpg) fixed;
+	
+}
+
+#wrapper { width: 1000px; margin: 0 auto; border: 2px solid #000; }
+
+hr { margin: 0 0 2px 0; color:#000; }
+
+
+ul, li { list-style: none; padding: 0; margin: 0; }
+
+H2 { margin: 5px 0 5px 0; }
+
+
+
+
+/********* form and related tag styles *********/
+
+#masthead form { position: absolute; left: 680px; top: 113px;}
+
+
+label{
+ font: bold 1em Arial,sans-serif;
+ color: #334d55;
+}
+				
+input{
+font-family: Arial,sans-serif;
+}
+
+/******************Search Box ******************/
+
+#search_box { 
+			  left: 4px;
+			  top: 2px;
+			  margin: 0;
+			  padding: 6px 2px;
+			  }
+
+#search_box form {
+              position: relative; left: 0; top: 0; padding: 3px;
+			  }
+			  
+#search_box p { font: bold italic .9em/1em Verdana, Arial, Helvetica, sans-serif; margin: 10px 0 1px 2px; padding-bottom: 1px; }			  
+
+/***********************************************/
+/* Layout Divs                                 */
+/***********************************************/
+#pagecell1{
+	position:absolute;
+	top: 160px;
+	left: 1%;
+	right: 1%;
+	width:1000px;
+	background-color: #ffffff;
+	border: 2px solid #000;
+	margin-bottom: 6px;
+}
+
+/***********************************************/
+/* Google Ad Headers                             */
+/***********************************************/
+
+#ad_head { margin: 10px 0 0 140px; }
+.head_ad { margin: 10px 0 0 140px; }
+
+
+#masthead{
+	position: absolute;
+	top: 10px;
+	left: 2%;
+	right: 2%;
+	width:95.6%;
+		
+}
+
+#masthead img { padding-right: 20px; display: inline;}
+
+#pageNav {
+	float: left;
+	width: 246px;
+	padding: 0px;
+	background-color: #fff;
+	border-right: 1px solid #000;
+	font: small Verdana,sans-serif;
+	}
+
+#content{
+	padding: 0;
+	margin: 0px 0px 0px 246px;
+	border-left: 1px solid #000;
+}
+
+
+
+
+
+/************** feature styles *****************/
+
+.feature {
+	padding: 0px 0px 50px 10px;
+	display: block;
+	}
+
+.feature img {
+	float: left;
+	padding: 10px 30px 25px 30px;
+	width: 432px;
+	height: 172px;
+	
+}
+
+.feature img.naval {
+	float: left;
+	padding: 10px 30px 25px 30px;
+	width: 432px;
+	height: 231px;
+}
+
+
+.feature img.tall {
+	float: left;
+	padding: 10px 30px 10px 30px;
+	width: 191px;
+	height: 280px;
+}
+
+/*
+.feature_tall { padding: 0px 0px 60px 10px; }
+.feature_tall img { 
+    float: left;
+	padding: 10px 30px 10px 30px;
+	width: 191px;
+	height: 280px;
+	}
+*/
+
+
+.feature p { font: bold 72%/1.3em Arial, Helvetica, sans-serif;
+             padding: 0px;
+			 margin: 0;
+			 } 
+.feature p.top_space { margin-top: 5px; }			 
+.feature p.arty_top_space { padding-top: 10px; }
+
+
+
+/*************** story styles ******************/
+
+.story {
+	padding: 10px 5px 0px 10px;
+	}
+
+.story p { font: 1em/1.3em Arial, Helvetica, sans-serif; }
+	
+
+
+.story img { padding-right: 8px; margin-left: 2px; border: none; float: left; }
+
+/* *************************************************************************************************** */
+
+/* Level 1 Units  */
+
+#level_1 ul.building { width: 400px; height: 85px; margin: 0 auto; }
+#level_1 ul.building li { float: left; height: 85px; padding: 5px; }
+#level_1 ul.building li.pic { padding: 0 0 0 0;
+                     width: 90px; height: 75px; 
+					 text-align: center; 
+					 font: .6em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+	
+
+
+#level_1 .building img { display:block; padding: 0; margin: 0 auto; }
+
+#level_1 li.arrow  { width: 38px; padding: 0; margin-top: 20px}
+#level_1 li.recruit_comm { width: 300px; }
+#level_1 li.recruit_comm  p { font-size: .8em; margin: 10px 15px; padding: 0; text-align: center; }
+
+#level_1 li.recruit_comm_long { width: 300px;  text-align: center; }
+#level_1 li.recruit_comm_long  p { font-size: .8em; margin: 5px; padding: 0; }
+
+#level_1 li.recruit_comm_long em { font: italic .7em/1em Arial, Helvetica, sans-serif;  }
+
+/* *************************************************************************************************** */
+
+/* Level 2 Units  */
+
+#level_2 ul.building { width: 660px; height: 85px; margin: 0 auto; }
+#level_2 ul.building li { float: left; height: 85px; padding: 5px; }
+#level_2 ul.building li.pic { padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: .6em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+	
+
+
+#level_2 .building img { display:block; padding: 0; margin: 0 auto; }
+
+#level_2 li.arrow  { width: 38px; padding: 0; margin-top: 20px}
+#level_2 li.recruit_comm { width: 400px;  text-align: center; }
+#level_2 li.recruit_comm  p { font-size: .8em; margin-top: 20px; padding: 0; margin-right: 25px; }
+
+#level_2 li.recruit_comm_long { width: 340px;  text-align: center; }
+#level_2 li.recruit_comm_long  p { font-size: .8em; margin: 5px 10px 10px 10px; padding: 0; }
+
+#level_2 li.recruit_comm_long em { font: italic .7em/1em Arial, Helvetica, sans-serif;  }
+
+/* *************************************************************************************************** */
+
+/* Level 3 Units  */
+
+#level_3 ul.building { width: 700px; height: 85px; margin: 30px auto; }
+#level_3 ul.building li { float: left; height: 85px; }
+#level_3 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+					  
+#level_3 ul.building li.gp_building { width: 550px; margin-left: 50px; }					  
+
+
+#level_3 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_3 li.arrow  { width: 38px; padding: 0; margin-top: 20px}
+#level_3 li.recruit_comm { width: 300px;  text-align: center; }
+#level_3 li.recruit_comm  p { font-size: .8em; margin: 20px 15px; padding: 0; }
+
+#level_3 li.recruit_comm_long { width: 320px;  text-align: center; }
+#level_3 li.recruit_comm_long  p { font-size: .8em; margin: 5px; padding: 0; }
+
+#level_3 li.recruit_comm_long em { font: italic .7em/1em Arial, Helvetica, sans-serif;  }
+
+
+
+/* *************************************************************************************************** */
+/* Level 4 Units  */
+
+#level_4 ul.building { width: 770px; height: 85px; margin: 20px auto; }
+#level_4 ul.building li { float: left; height: 85px; }
+#level_4 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width:90px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+#level_4 ul.building li.gp_building { width: 550px; margin-left: 70px; }	
+
+#level_4 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_4 li.arrow  { width: 36px; padding: 0; margin-top: 20px; }
+#level_4 li.recruit_comm { width: 250px;  text-align: center; }
+#level_4 li.recruit_comm  p { font-size: .8em; margin: 10px 5px; padding: 0; }
+
+#level_4 li.recruit_comm_long { width: 290px;  text-align: center; }
+#level_4 li.recruit_comm_long  p { font-size: .75em; margin: 5px; padding: 0; }
+
+#level_4 li.recruit_comm_longer { width: 360px;  text-align: center; }
+#level_4 li.recruit_comm_longer  p { font-size: .75em; margin: 5px auto; padding: 10px; }
+
+
+/* *************************************************************************************************** */
+
+/* *************************************************************************************************** */
+/* Level 5 Units  */
+
+#level_5 ul.building { width: 700px; height: 85px; margin: 0 5.25em; }
+#level_5 ul.building li { float: left; height: 85px; }
+#level_5 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width:88px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+#level_5 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_5 li.arrow  { width: 34px; padding: 0; margin-top: 20px}
+
+
+#level_5 ul.multi_build { width: 760px; margin: 0 auto; }
+#level_5 ul.multi_build li.recruit_comm {
+	width: 540px;
+	text-align: center;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#level_5 ul.multi_build li.recruit_comm  p { font-size: .8em; margin: 20px 5px; padding: 0; font-weight: bold; }
+#level_5 ul.multi_build li.recruit_comm  p em { padding: 25px 8px; font-weight: normal; }
+
+/* *************************************************************************************************** */
+
+/* Level 6 Units  */
+
+#level_6 ul.building { width: 740px; height: 85px; margin: 30px 2.5em; }
+#level_6 ul.building li { float: left; height: 85px; }
+#level_6 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width:88px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+#level_6 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_6 li.arrow  { width: 34px; padding: 0; margin-top: 20px}
+
+
+#level_6 ul.multi_build { width: 740px; margin: 0 auto; }
+#level_6 ul.multi_build li.recruit_comm { width: 440px;  text-align: center; margin: 0 auto; }
+#level_6 ul.multi_build li.recruit_comm  p { font-size: .8em; margin: 20px 5px; padding: 0; font-weight: bold; }
+#level_6 ul.multi_build li.recruit_comm  p em { font-size: .7em; margin: 25px 8px; padding: 0; font-weight: normal; }
+
+
+/* *************************************************************************************************** */
+
+/* Level 7 Units  */
+
+#level_7 ul.building { width: 760px; height: 85px; margin: 0 1px; }
+#level_7 ul.building li { float: left; height: 85px; }
+#level_7 ul.building li.pic { 
+                     padding: 0 0 0 0;
+                     width: 80px; height: 75px; 
+					 text-align: center; 
+					 font: bold .7em/1.2em Arial, Helvetica, sans-serif;
+					  }
+
+
+#level_7 .building img { display:block; padding: 0; margin: 0 auto; }
+#level_7 li.arrow  { width: 30px; padding: 0; margin-top: 30px}
+#level_7 li.arrow img { width: 26px; height: 16px; }  
+
+
+#level_7 ul.multi_build { width: 760px; margin: 0 auto; }
+#level_7 ul.multi_build li.recruit_comm { width: 440px;  text-align: center; margin: 0 auto; }
+#level_7 ul.multi_build li.recruit_comm  p { font-size: .8em; margin: 20px 5px; padding: 0; font-weight: bold; }
+
+
+/* ************* GunPowder Buildings ************************* */
+
+.gp_building { 
+               display: block;
+               font: italic .8em/1em Verdana, Arial, Helvetica, sans-serif; 
+			   width: 500px;
+			   margin-left: -85px;
+			   text-align: center;
+			   }
+               
+
+/************* Xttra Recruitment info *************************************/
+
+
+
+/************** siteInfo styles ****************/
+
+#siteInfo {
+	clear: both;
+	border-top: 1px solid #cccccc;
+	padding: 10px 10px 10px 10px;
+	margin-top: 0px;
+}
+
+#siteInfo a { font-size: small;	color: #000; }
+#siteInfo a:hover { color: #FF0000; }
+
+#footer {	
+	margin: 0 auto;
+	padding: 10px 0 20px 0;
+	text-align: center;
+	}
+	
+#footer a { font: 14px geneva, verdana, arial, helvetica, sans-serif; color: #000; }
+	
+#footer a:hover { color:#FF0000; }	
+
+
+
+/************ sectionLinks styles **************/
+
+#sectionLinks {
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#sectionLinks a:link, #sectionLinks a:visited {
+	display: block;
+	border-top: 0px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #f6d478;
+	font-weight: bold;
+	padding: 3px 0px 3px 10px;
+	color: #000;
+}
+
+#sectionLinks a:hover{
+	color: #00CCFF;
+	background-color: #f6d478; 
+	background-image: none;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/************ sectionLinks styles Moors Link **************/
+
+#sectionLinks.doa {
+	margin: 0px;
+	padding: 0px;
+	
+
+}
+
+a.doa  { text-align: center; }
+a.doa p { margin: 0 0 0 -25px;}
+
+/**************** advert styles *****************/
+
+#advert {
+    float: left;
+	margin: 10px auto;
+	width: 246px;
+	text-align: center;
+	font-size: 2em;
+	
+	
+}
+
+#advert img {
+	border: none;
+}
+
+#advert a { border: none; }
+
+/* Unit Type Hovers */
+
+ a.ut { position: relative; text-decoration: underline; color: #000; border-bottom: 1px double #000; }
+ a.ut span { display: none; }	
+ a.ut:hover span { display: block; position: absolute; top: 2em; left: -4em; padding: 2px; border: 1px double #000; color: #000; background-color:#D5C2A2; width: 24em; text-align: center; } 
+ 
+ /* Use for Urban Militia */
+ 
+ a.urb_mil { position: relative; text-decoration: underline; color: #000; border-bottom: 1px double #000; }
+ a.urb_mil span { display: none; }	
+ a.urb_mil:hover span { display: block; position: absolute; top: 2em; left: -6em; padding: 2px; border: 1px double #000; color: #000; background-color:#D5C2A2; width: 25em; text-align: center; } 
+ 
+ /* Religious Order Types */
+ 
+ a.ro { position: relative; text-decoration: underline; color: #000; border-bottom: 1px double #000; }
+ a.ro span {display: none; }
+ a.ro:hover span { display: block; position: absolute; top: 2em; left: -2em; padding: 2px; border: 1px double #000; color: #000; background-color:#D5C2A2; width: 20em; } 
+ 
+ /* Rural Levy Types */
+ 
+ a.rur_lev { position: relative; text-decoration: underline; color: #000; border-bottom: 1px double #000; }
+ a.rur_lev span {display: none; }
+ a.rur_lev:hover span { display: block; position: absolute; top: 2em; left: -10em; padding: 2px; border: 1px double #000; color: #000; background-color:#D5C2A2; width: 29em; text-align: center; } 
+
+/********************* Mercenary Units ******************************/
+
+p#merc_comm  { font-size: .9em; font-style: italic; width: 80%; text-align: center; }
+
+
+/********************* Guild Units **********************************/
+
+.x_build  { width: 440px; margin: 20px auto; text-align: center; }
+.x_build  { text-align: center; margin: 0 auto; }
+
+
+
+.cap { font: italic .8em/1em Verdana, Arial, Helvetica, sans-serif; margin-left: 55px; }

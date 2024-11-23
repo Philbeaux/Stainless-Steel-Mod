@@ -1,0 +1,219 @@
+/* CSS Document */
+
+body { text-align: center; margin: 0 auto; background-image: url(../images/texture_2.jpg) }
+
+
+a { margin: 0; padding: 0; border: 0; text-decoration: none; color: #000;  }
+a:hover { color: #CC0000;  }
+a img { border: none; }
+ul { display: block; }
+li { list-style: none;  text-align: center; display: inline; margin: 0; padding: 0; }
+p { margin: 0 0 2px 0; padding: 2px; font: .72em Arial, Helvetica, sans-serif; display: block; }
+p.small { font-size: .62em; }
+span { font: .7em Arial, Helvetica, sans-serif; z-index: 1; }
+span.small { font-size: .6em; }
+
+#wrapper { 
+margin: 0 auto; 
+width: 900px; 
+height: 420px;
+border: 2px solid #000; 
+text-align: center; 
+background-image:url(../images/parchment1.jpg);
+ }
+ 
+ a.tt { position: relative; }
+ a.tt span { display: none; }	
+ a.tt:hover span { display: block; position: absolute; top: .5em; left: 2.5em; padding: 1px; border: 1px solid #000; color: #000; background-color:#D5C2A2; } 
+ a.tt:hover span.small { display: block; position: absolute; top: .5em; left: 4em; padding: 1px; border: 1px solid #000; color: #000; background-color:#D5C2A2; }   
+ 
+ 	   
+#left img { width: 52px; height: 52px; }
+#left { float: left; width: 110px; height: 600px; padding: 1em 0 0 .5em;}
+
+#right img { width: 52px; height: 52px; }
+#right { float: right; width: 110px; height: 600px; padding: 1em .5em 0 0;}
+
+
+#units { width: 650px; margin-left: 7.5em; border-left: 2px solid #000; border-right: 2px solid #000; padding-left: 5px; padding-top: 5px; }
+#units ul { width: 650px; float: left; padding: 0; }
+#units li { float: left; width: 80px; height: 100px; }
+ul#units li.p { padding-bottom: 2px; }
+
+ul#units li p.small { font: .62em/1em normal Geneva, Arial, Helvetica, sans-serif; }
+
+#units h1 { margin-bottom: 0; }
+#footer { width: 98%; text-align: center; margin-top: 40px; padding: 10px; border-top: 3px solid #000; background-image: url(../images/footer_back.gif); background-repeat: repeat-x; }
+#footer a { font: 1.2em/1.3em Helvetica, sans-serif; padding: 3px; color: #FFFF00; }
+#footer a:hover { text-decoration: underline; color: #FFFFFF; }
+
+#aragon #wrapper {height: 1000px; }
+#aragon #units { height: 986px; }
+#aragon #left {height: 1000px; }
+#aragon #right {height: 1000px; }
+
+#byz #wrapper {height: 800px; text-align: center; }
+#byz #units { height: 800px; }
+#byz #left { height: 800px; }
+#byz #right { height: 800px; }
+
+#cuman #wrapper { height: 500px; }
+#cuman #units { height: 486px; }
+#cuman #left  { height: 500px; }
+#cuman #right { height: 500px; }
+
+#kwaz #wrapper {height: 580px; }
+#kwaz #units { height: 576px; }
+#kwaz #left, #right {height: 580px; }
+
+#dane #wrapper { height: 948px; }
+#dane #units   { height: 944px; }
+#dane #left   { height: 944px; }
+#dane #right   { height: 944px; }
+
+#egypt #wrapper { height: 780px; }
+#egypt #units   { height: 776px; }
+#egypt #right   { height: 776px; }
+#egypt #left   { height: 776px; }
+
+
+#england #wrapper { height: 988px; }
+#england #units   { height: 984px; }
+#england #left   { height: 984px; }
+#england #right  { height: 984px; }
+
+#france #wrapper { height: 1010px; }
+#france #units { height: 1016px; }
+#france #left { height: 1010px; }
+#france #right { height: 1010px; }
+
+#hre #wrapper { height: 1030px; }
+#hre #units { height: 1026px; }
+#hre #right { height: 1026px; }
+#hre #left { height: 1026px; }
+
+#hung #wrapper { height: 894px; }
+#hung #units { height: 890px; }
+#hung #right { height: 890px; }
+#hung #left { height: 890px; }
+
+
+#jeru #wrapper { height: 890px; }
+#jeru #units { height: 886px; }
+#jeru #right, #left { height: 890px; }
+
+
+
+
+#lith #wrapper { height: 700px; }
+#lith #units { height: 696px; }
+#lith #right, #left { height: 700px; }
+
+#kiev #wrapper { height: 590px; }
+#kiev #units { height: 576px; }
+#kiev #left  { height: 590px; }
+#kiev #right { height: 590px; }
+
+#milan #wrapper { height: 750px; }
+#milan #units { height: 746px; }
+#milan #right, #left  { height: 750px; }
+
+#mon #wrapper { height: 670px; }
+#mon #units { height: 660px; }
+#mon #right, #left { height:  670px; }
+
+#moors #wrapper { height: 610px; }
+#moors #units { height: 596px; }
+#moors #right  { height: 610px; }
+#moors #left { height: 610px; }
+
+#nor #wrapper { height: 700px; }
+#nor #units { height: 686px; }
+#nor #left { height: 700px; }
+#nor #right { height: 700px; }
+
+#nov #wrapper { height: 690px; }
+#nov #units { height: 686px; }
+#nov #left, #right { height: 690px; }
+
+#poland #wrapper { height: 884px; }
+#poland #units { height: 880px; }
+#poland #left, #right { height: 884px; }
+
+#port #wrapper { height: 740px; }
+#port #units { height: 726px; }
+#port #left { height: 740px; }
+#port #right { height: 740px; }
+
+#scot #wrapper {height: 795px; }
+#scot #units { height: 781px; }
+#scot #left {height: 795px; }
+#scot #right {height: 795px; }
+
+
+#sicily #wrapper {height: 890px; }
+#sicily #units { height: 886px; }
+#sicily #left {height: 890px; }
+#sicily #right {height: 890px; }
+
+#spain #wrapper { height: 834px; }
+#spain #units { height: 820px; }
+#spain #left { height: 834px; }
+#spain #right { height: 834px; }
+
+#teut #wrapper { height: 594px; }
+#teut #units { height: 580px; }
+#teut #left { height: 594px; }
+#teut #right { height: 594px; }
+
+#turks #wrapper { height: 804px; }
+#turks #units { height: 790px; }
+#turks #left { height: 804px; }
+#turks #right { height: 804px; }
+
+#venice #wrapper { height: 1084px; }
+#venice #units { height: 1090px; }
+#venice #right { height: 1084px; }
+#venice #left { height: 1084; }
+
+#mercs #wrapper { height: 9360px; }
+#mercs #units   { height: 9346px; }
+
+/**************** Mercs Menu ***********************/
+
+#mercs ul { float: left; padding: 0; margin: 0 auto; }
+#mercs h1 { margin: 10px; padding: 0; }
+#mercs li { height: 120px; }
+
+#ad_head { 
+         text-align: center;
+		  width: 728px;
+		  margin-left: 170px;
+		   }
+		   
+#ad_bottom {
+             text-align: center;
+		  width: 728px;
+		  margin-left: 170px;
+		  }		
+		  
+		  
+	  
+		     
+		   
+/***************** Misc  *****************************/
+
+#units ul#cemter_1   {  margin-left: 280px; width: 80px; }
+#units ul#cemter_3   {  margin-left: 200px; }
+#units ul#cemter_4   {  margin-left: 160px; }	
+#units ul#center_5   {  margin-left: 120px; }
+
+.l_40  { margin-left: 40px; }
+.l_80  { margin-left: 80px; }
+.l_120 { margin-left: 120px; }
+.l_160 { margin-left: 160px; }
+.l_180 { margin-left: 180px; }
+.l_200 { margin-left: 200px; }
+.l_210 { margin-left: 210px; }
+.l_240 { margin-left: 240px; }
+.l_280 { margin-left: 280px; }	   

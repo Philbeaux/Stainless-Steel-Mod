@@ -1,0 +1,3807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<HEAD>
+<TITLE>RC 2.0 MEDIEVAL</TITLE>
+
+<STYLE TYPE="text/css">
+body {
+margin: 14px;
+background-color: #fff;
+scrollbar-base-color: #C9D1C6;
+color: #000000;
+font-family: "Arial", sans-serif;
+font-size: 10pt;
+text-align: left;
+}
+
+
+a { color: #000000; }
+A:hover {
+text-decoration: underline;
+color: #FF0000;
+}
+hr { margin: 4px 0; }
+
+p {
+font-family: "Arial", sans-serif;
+font-size: 12pt;
+text-align: left;
+color: #000000;
+}
+
+th { font-size: .8em; text-align: center; }
+
+td { 
+font-size: 9pt;
+text-align: center;
+}
+
+td.small { font-size: .7em; }
+em { padding: 3px; margin: 4px 2px; }
+p.line { display: inline; font-size: .7em; font-style: italic; }
+pre {
+color: #000000;
+}
+
+tr:hover { background-color:#CCCCCC; }
+h1 {
+font-family: "Arial", sans-serif;
+font-size: 20pt;
+text-align: center;
+color: #4A735A;
+}
+h2 {
+font-family: "Arial", sans-serif;
+font-size: 13pt;
+text-align: left;
+color: #FF0000;
+margin-bottom: 6px;
+}
+h3 {
+font-family: "Arial", sans-serif;
+font-size: 11pt;
+text-align: left;
+color: #000000;
+margin: 0;
+padding: 2px;
+text-decoration: underline;
+margin-bottom: 6px;
+}
+
+#menu { width: 99%; }
+#menu a:link { font: italic bold 1.2em/1.8em Verdana, Arial, Helvetica, sans-serif; }
+
+#footer { width: 99%; text-align: center; border-top: 1px solid #000; padding: 5px; }
+#footer a:link { font: normal 1em/1em Verdana, Arial, Helvetica, sans-serif; }
+#ad_head { 
+          text-align: center;
+		  width: 98%;
+		  margin: 5px auto;
+		   }
+</STYLE>
+</HEAD>
+
+<BODY>
+<div id="ad_head"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Stainless-Steel Links Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-3444422587819362"
+     data-ad-slot="7245372184"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div id="menu">
+   	 <a href="http://www.stainless-steel-mod.com">Home</a>
+    </div>
+<H1>RC 2.0 MEDIEVAL</H1>
+
+<HR>
+
+<p>RC is designed to depict the offensive and defensive capabilities of medieval arms, armor and combatants, in particular the relative effects of these factors.<BR>
+If the roughly relative (and roughly is the best we can do given all the other variables on the battlemep and hardcoding we can't control) capabilities of cavalry compared to infantry, of sword compared to mace, of mail compared to plate, of arrow compared to sword, of sword versus mail, of arrow versus plate etc are in place then that is the objective.
+From this point, we can then adjust the following in data/battle_config.xml:
+<!-- global combat balancing factors -->
+<BR>
+<combat-balancing><BR>
+<missile-target-accuracy><BR>
+<infantry>1.0</infantry><BR>
+<cavalry>1.5</cavalry><BR>
+<elephants>2.0</elephants><BR>
+</missile-target-accuracy><BR>
+<melee-hit-rate>1.50</melee-hit-rate><BR>
+</combat-balancing><BR>
+<!-- per unit task configuration -->
+<p>Altering melee-hit-rate has implications for unit stamina - if kill rates are too low then heavy armored units are at too great a disadvantage, they will tire too easily and be exhausted half way through the battle (the heat values are an attempt to depict the relative heat penalties of fighting in various armors, in various climates, carrying various weapons etc.)<BR>
+The heat values in various climates can be globally adjusted in descr_climates, and they will have to be balanced for any changes made to melee kill rates.
+Text enclosed in ***...*** indicates additional notes.<BR>
+Text enclosed in ###...### indicates examples.</p>
+<BR>
+<h2>UNIT QUALITY LEVELS</h2>
+<strong>Peasant</strong><BR>
+<strong>Peasant Militia</strong><BR>
+<strong>Militia</strong><BR>
+<strong>Average</strong><BR>
+<strong>Superior</strong><BR>
+<strong>Elite</strong><BR>
+<strong>Exceptional</strong>
+<BR>
+<h2>CATEGORY</h2>
+<strong>Infantry</strong><BR>
+<strong>Cavalry</strong>
+<BR>
+<h2>CLASS</h2>
+<strong>Light</strong><BR>
+<strong>Spearmen:</strong> <em>For cavalry, represents medium cavalry</em><BR>
+<strong>Heavy</strong><BR>
+<strong>Skirmish:</strong> <em>For infantry, Skirmishers SHOOT ACCURATELY OVER OPEN SIGHTS. Skirmisher cavalry CLOSES TO SHORT RANGE. <BR>
+Missile:  For both infantry and cavalry, Missileers use MAXIMUM SHOOTING RATE OVER LONGER RANGES to create an 'arrow shower' over a larger area.</em>
+
+
+<BR>
+<h2>SUMMARY OF DIFFERENCES BETWEEN SKIRMISH AND MISSILE UNITS</h2>
+<BR>
+<strong>Skirmishers</strong>
+
+<p>Shorter range, shoot directly over open sights<BR>
+Most accurate of all projectile units<BR>
+HA Skirmishers close to very short range, ideally just out of javelin range but that is difficult to always control<BR>
+Melee at ONE quality level less than they shoot at<BR>
+Have less morale than a melee unit of equivalent quality<BR>
+Foot Skirmishers have reduced mass because they are less conditioned by training and temperament for any kind of impact situation<BR>
+Tend to have more open formations<BR>
+Foot Skirmishers are usually deployed in front of the main battle line<BR>
+Have 'Skirmish' function switched on<BR>
+Skirmish HA are usually deployed on the wings<BR>
+Skirmish HA employ relatively heavy arrows at short range so have +1 damage compared to Missile HA<BR>
+Skirmish HA typically ride 'HA' mount type category which give +0.1 move_speed_mod, -2 heat, -0.5 mount mass (depicts mares, more responsive and agile but smaller and not trained for melee)<BR>
+Via animation, mounted Skirmishers tend to back out once engaged in melee<BR>
+Are more likely to be 'Local' and less likely to be Professionals. As such, they will not only usually have lighter equipment, but equipment of lesser quality as well<BR>
+Tend to have more 'fragile' mental stats eg Low Discipline, but this is also dependent on their type eg Local, Pro, Feudal or whatever</p>
+
+<h3>Missileers</h3><BR>
+<p>Longer range, arc arrows onto targets to create an 'arrow shower' over a wider area<BR>
+Maximum shooting rate possible <BR>
+Less accurate than Skirmishers<BR>
+Melee at TWO quality levels less than they shoot at<BR>
+Have less morale than melee and skirmish units of equivalent quality<BR>
+Foot Missile have further reduced mass because they are less conditioned by training and temperament for any kind of impact situation<BR>
+Tighter formations than Skirmishers<BR>
+Foot Missile are usually deployed behind the main battle line<BR>
+Foot Missile usually have 'Skirmish' function switched off<BR>
+Missile HA are usually deployed on the wings but closer in than Skirmish HA<BR>
+Missile HA cannot use as heavy a draw-poundage bow as a foot archer so to reach a similar range must use lighter arrows, and hence have -1 damage compared to Skirmish HA<BR>
+Missile HA can ride 'HA' mount type category but in practice its variable - some use heavier mounts if they might engage in melee afterwards (eg Mamluk Archers, Khorchi)<BR>
+Via animation, mounted Missileers tend to back out once engaged in melee<BR>
+Are more likely to be Professionals and less likely to be Locals etc. Usually have heavier and better quality equipment<BR>
+Tend to have more 'fragile' mental stats eg Low Discipline, but this is also dependent on their type eg Local, Pro, Feudal or whatever</p>
+<p><em>SKIRMISH UNITS MELEE AT ONE QUALITY LEVEL LESS THAN THEIR SHOOTING LEVEL<BR>
+MISSILE UNITS MELEE AT TWO QUALITY LEVELS LESS THAN THEIR SHOOTING LEVEL</em></p>
+<BR>
+
+<h2> UNIT SIZE GUIDE TABLE</h2>
+
+<table width="800" border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <th>Type</th>
+    <th>Cavalry</th>
+    <th>Infantry</th>
+    <th>Spearmen</th>
+    <th>Pikemen</th>
+    <th>Foot Skirmish</th>
+    <th>Foot Missile</th>
+  </tr>
+  <tr>
+    <th>Bodyguard</th>
+    <td>8</td>
+    <td>16</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>Feudal</th>
+    <td>20</td>
+    <td>40</td>
+    <td>48</td>
+    <td>60</td>
+    <td>40</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <th>Religious</th>
+    <td>20</td>
+    <td>40</td>
+    <td>48</td>
+    <td>60</td>
+    <td>40</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <th>Early Pro</th>
+    <td>24</td>
+    <td>48</td>
+    <td>60</td>
+    <td>80</td>
+    <td>48</td>
+    <td>48</td>
+  </tr>
+  <tr>
+    <th>Late Pro</th>
+    <td>32</td>
+    <td>60</td>
+    <td>80</td>
+    <td>100</td>
+    <td>60</td>
+    <td>60</td>
+  </tr>
+  <tr>
+    <th>Urban Pro</th>
+    <td>32</td>
+    <td>60</td>
+    <td>80</td>
+    <td>100</td>
+    <td>60</td>
+    <td>60</td>
+  </tr>
+  <tr>
+    <th>Urban Militia (village)</th>
+    <td>&nbsp;</td>
+    <td>48</td>
+    <td>60</td>
+    <td>&nbsp;</td>
+    <td>48</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>Urban Militia (city)</th>
+    <td>24</td>
+    <td>48-60</td>
+    <td>60-80</td>
+    <td>80-100</td>
+    <td>48-60</td>
+    <td>48</td>
+  </tr>
+  <tr>
+    <th>Local</th>
+    <td>24-32</td>
+    <td>48-60</td>
+    <td>60-80</td>
+    <td>80-100</td>
+    <td>48-60</td>
+    <td>48-60</td>
+  </tr>
+  <tr>
+    <th>Rural Levy</th>
+    <td>&nbsp;</td>
+    <td>60-80</td>
+    <td>60-80</td>
+    <td>&nbsp;</td>
+    <td>48</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>Mercenary (common)</th>
+    <td>24</td>
+    <td>48</td>
+    <td>60</td>
+    <td>80</td>
+    <td>48</td>
+    <td>48</td>
+  </tr>
+  <tr>
+    <th>Mercenary (renowned)</th>
+    <td>32</td>
+    <td>60</td>
+    <td>80</td>
+    <td>100</td>
+    <td>60</td>
+    <td>60</td>
+  </tr>
+</table>
+<br>
+
+<em>***'Renowned' mercenaries represent historically famous or especially well-organized units, eg Swiss, Landsknechts, Varangian Guard, Condottieri***</em>
+<BR>
+<h2>UNIT MASS</h2>
+<table width="200" border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <th>Average Armor Mass <BR>
+(round fractions down)</th>
+    <th>Resulting Mass</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0.7</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0.8</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>0.9</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>1.1</td>
+  </tr>
+  <tr>
+    <td>5+</td>
+    <td>1.2</td>
+  </tr>
+</table>
+
+
+<br>
+<em>For Armor Mass see the MASTER ARMOR TABLE
+***Fractions rounded down because its probable the unit will not achieve all armor upgrades***<BR>
+###EXAMPLE: unit has armor upgrades light mail (mass 2), heavy mail (3), coat of plates (4), partial plate (5). Total is 14, average is 14/4 = 3.5, round down to 3 gives resulting mass of 1.0###
+</em><br>
+<h2>Additions</h2>
+<table width="190" border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <th width="150">missile unit</th>
+    <td width="40">-0.1</td>
+  </tr>
+  <tr>
+    <th>skirmish unit</th>
+    <td>-0.05</td>
+  </tr>
+  <tr>
+    <th>heater shield </th>
+    <td>+0.05</td>
+  </tr>
+  <tr>
+    <th>kite shield </th>
+    <td>+0.1</td>
+  </tr>
+  <tr>
+    <th>pavise shield </th>
+    <td>+0.15</td>
+  </tr>
+</table>
+<br>
+
+<em>***Missile/Skirmish units are less conditioned by training and temperament for any kind of collision situation***
+</em><br>
+<h2>Multipliers</h2>
+<table width="140" border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <th width="100">2H non-polearm/pike</th>
+    <td width="40">x1.25</td>
+  </tr>
+  <tr>
+    <th>polearm/pike</th>
+    <td>x1.5</td>
+  </tr>
+</table>
+<br>
+
+<h2 >Basic MountsTerrain<p class="line">....Mount Types (as defined in descr_mount) and Terrain Penalties (see final table)<br />
+</p>
+</h2>
+<table width="800" border="1" cellspacing="0" cellpadding="2">
+  <tr>
+    <th>&nbsp;    </th>
+    <th>Animation</th>
+    <th>mov_speed_mod</th>
+    <th>Armor Added</th>
+    <th>Mass</th>
+    <th>HeatPenalty</th>
+    <th>Non-Couched Weapon Charge Charge</th>
+  </tr>
+  <tr>
+    <th>french armored horse<br>
+
+      Heavy</th>
+    <td>heavy_horse</td>
+    <td>0.85</td>
+    <td>+8</td>
+    <td>4.0</td>
+    <td>+5</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>armored horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>0.85</td>
+    <td>+8</td>
+    <td>3.75</td>
+    <td>+5</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>cataphract horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>0.75</td>
+    <td>+7</td>
+    <td>3.5</td>
+    <td>+6</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>russian armored horse Heavy</th>
+    <td>heavy_horse</td>
+    <td>0.9</td>
+    <td>+6</td>
+    <td>3.25</td>
+    <td>+5</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>mamluk armored horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>0.9</td>
+    <td>+6</td>
+    <td>3.25</td>
+    <td>+5</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>eastern armored horse (middle east) Heavy</th>
+    <td>heavy_horse</td>
+    <td>0.85</td>
+    <td>+5</td>
+    <td>3.0</td>
+    <td>+4</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>early eastern armoured horse Heavy</th>
+    <td>heavy_horse</td>
+    <td>0.8</td>
+    <td>+4</td>
+    <td>2.75</td>
+    <td>+4</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>french mailed horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>0.95</td>
+    <td>+4</td>
+    <td>3.5</td>
+    <td>+4</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>mailed horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>0.95</td>
+    <td>+4</td>
+    <td>3.25</td>
+    <td>+4</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>mongol armored horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>0.9</td>
+    <td>+4</td>
+    <td>2.75</td>
+    <td>+3</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th> russian barded horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>1</td>
+    <td>+4</td>
+    <td>3.0</td>
+    <td>+3</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>eastern barded horseHeavy</th>
+    <td>heavy_horse</td>
+    <td>1</td>
+    <td>+3</td>
+    <td>2.5</td>
+    <td>+2</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <th>byzantine barded horseMedium</th>
+    <td>horse</td>
+    <td>0.9</td>
+    <td>+3</td>
+    <td>3.0</td>
+    <td>+2</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>french barded horse Medium</th>
+    <td>horse</td>
+    <td>0.95</td>
+    <td>+2</td>
+    <td>3.25</td>
+    <td>+2</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>barded horse Medium</th>
+    <td>horse</td>
+    <td>0.95</td>
+    <td>+2</td>
+    <td>3.0</td>
+    <td>+2</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>early barded horse Medium</th>
+    <td>horse</td>
+    <td>0.95</td>
+    <td>+2</td>
+    <td>2.75</td>
+    <td>+2</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>heavy horse Medium</th>
+    <td>horse</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>2.75</td>
+    <td>+1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>early heavy horse Medium</th>
+    <td>horse</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>2.5</td>
+    <td>+1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>mongol heavy horse Medium</th>
+    <td>horse</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>2.25</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>eastern horse Light</th>
+    <td>fast_horse</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>2.0</td>
+    <td>-1</td>
+    <td>+1</td>
+  </tr>
+  <tr>
+    <th>medium horseLight</th>
+    <td>fast_horse</td>
+    <td>0.95</td>
+    <td>&nbsp;</td>
+    <td>2.0</td>
+    <td>0</td>
+    <td>+1</td>
+  </tr>
+  <tr>
+    <th>ponyLight</th>
+    <td>horse</td>
+    <td>0.95</td>
+    <td>&nbsp;</td>
+    <td>1.25</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>fast ponyLight</th>
+    <td>fast_horse</td>
+    <td>0.95</td>
+    <td>&nbsp;</td>
+    <td>1.25</td>
+    <td>0</td>
+    <td>+1</td>
+  </tr>
+  <tr>
+    <th>mongol fast ponyLight</th>
+    <td>fast_horse</td>
+    <td>.9</td>
+    <td>&nbsp;</td>
+    <td>1.25</td>
+    <td>-2</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>Camel</th>
+    <td>camel</td>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>3.25</td>
+    <td>-2</td>
+    <td>-1</td>
+  </tr>
+</table>
+
+<BR>
+<em>***'Armor' is added to the armor value of the rider***<BR>
+***'Non-Couched Weapon Charge' refers to the charge value of any mounted melee weapon and the mounted charge weapons spear and non-couched light lance***<BR>
+***All stats are prior to the application of MOUNT CATEGORIES as in the next table***</em>
+<BR>
+<h2>MOUNT CATEGORIES</h2>
+<table width="800" border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Category</th>
+<Th>Anim Applied for</Th>
+<Th>Melee Attack<th>Lance Charge</Th>
+<Th>Defense</Th>
+<Th>move_speed_mod</Th>
+<Th>mass</Th>
+<Th>heat</Th>
+<Th>morale</Th>
+</TR>
+
+<TR>
+<th>All ponies</th>
+<TD>shuffle_backward</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>HA/Javelin</th>
+<TD>shuffle_backward</TD>
+<TD>0</TD>
+<TD>N/A</TD>
+<TD>0</TD>
+<TD>+0.1</TD>
+<TD>-0.5</TD>
+<TD>-2</TD>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Lancer</th>
+<TD>shuffle_backward</TD>
+<TD>-1</TD>
+<TD>+4</TD>
+<TD>0</TD>
+<TD>+0.05</TD>
+<TD>+0.25</TD>
+<TD>-1</TD>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Charger</th>
+<TD>idle</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>+1</TD>
+</TR>
+<TR>
+<th>Brawler</th>
+<TD>shuffle_forward</TD>
+<TD>+1</TD>
+<TD>-2</TD>
+<TD>+2</TD>
+<TD>-0.05</TD>
+<TD>-0.25</TD>
+<TD>+2</TD>
+<TD>+2</TD>
+</TR>
+</TABLE>
+<br>
+
+<em>***Ponies are only ever ponies, they are not specified as HA/Lancer/Charger/Brawler***
+ModifiersAnim (eg +1 means a Lancer would apply 'idle' anim rather than 'shuffle_backward')</em>
+<BR>
+
+<h2>Modifiers
+  <p class="line">...Anim (eg +1 means a Lancer would apply 'idle' anim rather than 'shuffle_backward')</p></h2>
+
+<table width="300" border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Elite melee or better</th>
+<TD COLSPAN="40">+1</TD>
+</TR>
+<TR>
+<th>Impetuous</th>
+
+<td>+1</TD>
+</TR>
+<TR>
+<th>Bodyguard</th>
+
+<td>-1</TD>
+</TR>
+<TR>
+<th>Light Cavalry</th>
+
+<td>-1</TD>
+</TR>
+<TR>
+<th>Spearmen Cavalry</th>
+<TD>-1</TD>
+</TR>
+</table>
+<br>
+
+<em>***Bodyguard is usually Elite or better so the +1 and -1 cancel out***<BR>
+###EXAMPLE: the unit is elite and rides an armored horse. Its tactical role is a Lancer. Its lance attack is +2, melee attack and defense -1. Its move_speed_mod is now 0.9 and its mass 4.0. Because the unit is elite, its animation is 'Charger' instead of 'Lancer'###
+DESCR_MOUNT MOUNT TYPES
+Mount Types in descr_mount.txt are constructed by concatenating the Mount followed by the Animation followed by the Mount Category (if different to the Animation).<BR>
+Using the example above, the Mount Type would be 'Armored Horse Charger Lancer'.<BR>
+A Cataphract Brawler would be 'Cataphract Horse Brawler'.<BR>
+A light cavalry Eastern Horse charger would be 'Eastern Horse Lancer Charger' (Lancer animation because Light Cavalry uses Anim -1). 
+</em><BR>
+<h2>IMPORTANT ATTRIBUTES</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Attribute</th>
+
+<th>Used by</th>
+</TR>
+
+<TR>
+<th>can_formed_charge</th>
+<TD>Any cavalry with a melee level of Superior or better</TD>
+</TR>
+<TR>
+<th>frighten_foot</th>
+<TD>Any cavalry with a melee level of Superior or better</TD>
+</TR>
+<TR>
+<th>command</th>
+<TD>Any Exceptional unit</TD>
+</TR>
+<TR>
+<th>start_not_skirmishing</th>
+<TD>Foot Missile units</TD>
+</TR>
+</table>
+<br>
+
+<h2>FORMATIONS GUIDE</h2>
+<h3>Foot Units</h3>
+<table width="600px" border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Quality</th>
+
+<th>Infantry</th>
+
+<th>Spearman</th>
+
+<th>Crossbow</th>
+
+<th>Javelin</th>
+
+
+<th>Skirmish</th>
+
+<th>Missile</th>
+</TR>
+<TR>
+<th>Peasant</th>
+
+<TD>1.4, 1.4, 2.8, 2.8</TD>
+<TD>1.4, 1.4, 2.8, 2.8</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>-</TD>
+
+
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<td>-</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>1.4, 1.2, 2.8, 2.4</TD>
+<TD>1.2, 1.2, 2.4, 2.4</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>1.4, 1.2, 2.8, 1.4</TD>
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<td>-</TD>
+</TR>
+<TR>
+<th>Militia</th>
+
+<TD>1.2, 1.0, 2.4, 2.0</TD>
+<TD>1.0, 1.0, 2.0, 2.0</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>1.4, 1.2, 2.8, 1.4</TD>
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<td>1.2, 1.2, 2.4, 2.4</TD>
+</TR>
+<TR>
+<th>Average</th>
+
+<TD>1.2, 1.0, 2.4, 2.0</TD>
+<TD>1.0, 1.0, 2.0, 2.0</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>1.4, 1.2, 2.8, 1.4</TD>
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<td>1.2, 1.2, 2.4, 2.4</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>1.2, 1.0, 2.4, 2.0</TD>
+<TD>1.0, 1.0, 2.0, 2.0</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>1.4, 1.2, 2.8, 1.4</TD>
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<td>1.2, 1.2, 2.4, 2.4</TD>
+</TR>
+<TR>
+<th>Elite</th>
+
+<TD>1.2, 1.0, 2.4, 2.0</TD>
+<TD>1.0, 1.0, 2.0, 2.0</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>1.4, 1.2, 2.8, 1.4</TD>
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<td>1.2, 1.2, 2.4, 2.4</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>1.2, 1.0, 2.4, 2.0</TD>
+<TD>1.0, 1.0, 2.0, 2.0</TD>
+<TD>1.4, 1.4, 1.4, 1.4</TD>
+<TD>1.4, 1.2, 2.8, 1.4</TD>
+<TD>1.4, 1.4, 2.8, 2.0</TD>
+<TD>1.2, 1.2, 2.4, 2.4</TD>
+</TR>
+</table>
+<br>
+
+<em>***Formations are constructed taking into account range considerations for missile/skirmish units***<BR>
+***Crossbows do not have an open formation - this prevents them wasting time adjusting to incoming fire due to their slow reload animation***</em>
+<br>
+<br>
+
+<h3>Additional</h3>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Phalanx Polearm</th>
+<td>1.2, 1.2, 2.4, 2.4</TD>
+</TR>
+<TR>
+<th>Some light infantry</th>
+<TD>+0.2, +0.2, +0.4, +0.4 (usually untrained)</TD>
+</TR>
+<TR>
+<th>Optional for 2H non-phalanx weapon</th>
+<td>+0.2, +0, +0.4, +0</td>
+</TR></table>
+<br>
+
+<em>Pikemen vary by unit
+<BR>
+***For example, Swiss typically employed a deep column formation to lessen the frontage exposed to cavalry charges, and expose the cavalry to flank attack***</em>
+<br>
+<br>
+
+<h3>Mounted Units</h3>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Western Heavy Charge Cavalry</th>
+<TD>1.5, 4.4, 2.5, 6</TD>
+</TR>
+<TR>
+<th>Javelin</th>
+
+<td>2, 4.4, 3, 4.4</TD>
+</TR>
+<TR>
+<th>Other</th>
+
+<td>2, 4.4, 3, 6</TD>
+</TR>
+</table>
+<BR>
+
+<h2>STAT_HEALTH<p class="line">....First stat is always 1.
+<br>
+Unless unit is Elephant, second stat varies as below to assist in Autoresolve:</p></h2>
+<br>
+
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Foot Unit</th>
+
+<td width="30">1</TD>
+</TR>
+<TR>
+<th>Mounted Unit</th>
+<td width="30">2</TD>
+</TR>
+<TR>
+<th>Missile Unit</th>
+
+<td width="30">+1</TD>
+</TR>
+<TR>
+<th>Skirmisher Unit</th>
+
+<td width="30">+1</TD>
+</TR>
+<TR>
+<th>Peasant quality</th>
+
+<td width="30">-1</TD>
+</TR>
+<TR>
+<th>Peasant Militia quality</th>
+
+<td width="30">-1</TD>
+</TR>
+<TR>
+<th>Heavy Cavalry</th>
+
+<td width="30">+1</TD>
+</TR>
+</table>
+<br>
+
+MAXIMUM IS 3<BR>
+MINIMUM IS 0
+<BR>
+<h2>FOOT MISSILE WEAPONS</h2>
+
+<table border="1" cellpadding="2" cellspacing="0">
+<tr><th width="66" align="center">Weapon Type</th>
+<th>BaseAttack</th>
+<th>BaseRange</th>
+<th>HeatPenalty</th>
+<th>Special Attributes</th>
+<th class="small">Animation Movement Speeds (slow)</th>
+<th class="small">Animation Movement Speeds (medium)</th>
+<th class="small">Animation Movement Speeds (fast)</th>
+
+</TR>
+
+<TR>
+<th width="66" align="center">javelin</th>
+<TD>11</TD>
+<TD>55</TD>
+<td>&nbsp;</td>
+<TD>area attack, 4 javelins (suggested)</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Javelin</TD>
+<TD class="small">MTW2_Fast_Javelin</TD>
+</TR>
+<TR>
+<th width="66" align="center">short bow (skirmish)</th>
+<TD>2</TD>
+<TD>110</TD>
+<TD>-1</TD>
+<TD>area attack, 40 arrows, Simple Bow Type</TD>
+<TD class="small">MTW2_Slow_Bowman</TD>
+<TD class="small">MTW2_Bowman</TD>
+<TD class="small">MTW2_Fast_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">short bow (missile)</th>
+<TD>2</TD>
+<TD>140</TD>
+<TD>-1</TD>
+<TD>area attack, 40 arrows, Simple Bow Type</TD>
+<TD class="small">MTW2_Slow_Mass_Bowman</TD>
+<TD class="small">MTW2_Mass_Bowman</TD>
+<TD class="small">MTW2_Fast_Mass_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">war bow (skirmish)</th>
+<TD>3</TD>
+<TD>120</TD>
+<TD>-1</TD>
+<TD>area attack, 35 arrows, Simple Bow Type</TD>
+<TD class="small">MTW2_Slow_Bowman</TD>
+<TD class="small">MTW2_Bowman</TD>
+<TD class="small">MTW2_Fast_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">war bow (missile)</th>
+<TD>3</TD>
+<TD>160</TD>
+<TD>-1</TD>
+<TD>area attack, 35 arrows, Simple Bow Type</TD>
+<TD class="small">MTW2_Slow_Mass_Bowman</TD>
+<TD class="small">MTW2_Mass_Bowman</TD>
+<TD class="small">MTW2_Fast_Mass_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">longbow (skirmish)</th>
+<TD>4</TD>
+<TD>130</TD>
+<TD>&nbsp;</TD>
+<TD>area attack, 30 arrows, Simple Bow Type</TD>
+<TD class="small">MTW2_Slow_Bowman</TD>
+<TD class="small">MTW2_Bowman</TD>
+<TD class="small">MTW2_Fast_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">longbow (missile)</th>
+<TD>4</TD>
+<TD>180</TD>
+<td>&nbsp;</td>
+<TD>area attack, 30 arrows, Simple Bow Type</TD>
+<TD class="small">MTW2_Slow_Mass_Bowman</TD>
+<TD class="small">MTW2_Mass_Bowman</TD>
+<TD class="small">MTW2_Fast_Mass_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">composite bow (skirmish)</th>
+<TD>140</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>area attack, 30 arrows, Composite Bow Type</TD>
+<TD class="small">MTW2_Slow_Bowman</TD>
+<TD class="small">MTW2_Bowman</TD>
+<td class="small">MTW2_Fast_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">composite bow (missile)</th>
+<TD>4</TD>
+<TD>190</TD>
+<td>&nbsp;</td>
+<TD>area attack, 30 arrows, Composite Bow Type</TD>
+<TD class="small">MTW2_Slow_Mass_Bowman</TD>
+<TD class="small">MTW2_Mass_Bowman</TD>
+<td class="small">MTW2_Fast_Mass_Bowman</TD>
+</TR>
+<TR>
+<th width="66" align="center">wooden crossbow</th>
+<TD>6</TD>
+<TD>100</TD>
+<TD>-2</TD>
+<TD>area attack, 30 bolts</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Crossbow</TD>
+<TD class="small">MTW2_Fast_Crossbow</TD>
+</TR>
+<TR>
+<th width="66" align="center">light crossbow</th>
+<TD>7</TD>
+<TD>110</TD>
+<TD>-2</TD>
+<TD>area attack, 30 bolts</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Crossbow</TD>
+<TD class="small">MTW2_Fast_Crossbow</TD>
+</TR>
+<TR>
+<th width="66" align="center">composite crossbow</th>
+<TD>8</TD>
+<TD>120</TD>
+<TD>-2</TD>
+<TD>area attack, 25 bolts</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Crossbow</TD>
+<TD class="small">MTW2_Fast_Crossbow</TD>
+</TR>
+<TR>
+<th width="66" align="center">heavy composite crossbow</th>
+<TD>10</TD>
+<TD>140</TD>
+<TD>-1</TD>
+<TD>area attack, 20 bolts</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+</TR>
+<TR>
+<th width="66" align="center">pavise crossbow</th>
+<TD>10</TD>
+<TD>140</TD>
+<TD>-1</TD>
+<TD>area attack, 20 bolts</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Pavise_Crossbow</TD>
+</TR>
+<TR>
+<th width="66" align="center">steel crossbow</th>
+<TD>11</TD>
+<TD>150</TD>
+<td>&nbsp;</td>
+<TD>area attack, 20 bolts</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Steel_Crossbow</TD>
+</TR>
+<TR>
+<th width="66" align="center">arbalest (steel crossbow)</th>
+<TD>13</TD>
+<TD>160</TD>
+<td>+1</td>
+<TD>area attack, 15 bolts</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Steel_Crossbow</TD>
+</TR>
+<TR>
+<th width="66" align="center">handgonne</th>
+<TD>11</TD>
+<TD>55</TD>
+<TD>-3</TD>
+<TD>area attack, 12 bullets</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Handgun</TD>
+</TR>
+<TR>
+<th width="66" align="center">pavise handgonne</th>
+<TD>11</TD>
+<TD>55</TD>
+<TD>-3</TD>
+<TD>area attack, 12 bullets</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Handgun_Pavise</TD>
+</TR>
+<TR>
+<th width="66" align="center">early arquebus</th>
+<TD>14</TD>
+<TD>80</TD>
+<TD>-2</TD>
+<TD>area attack, 12 bullets, slowest arquebus reload</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Arquebus_3</TD>
+<TD class="small">MTW2_Fast_Arquebus_3</TD>
+</TR>
+<TR>
+<th width="66" align="center">arquebus</th>
+<TD>18</TD>
+<TD>100</TD>
+<TD>-2</TD>
+<TD>area attack, 12 bullets</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Arquebus_2</TD>
+<TD class="small">MTW2_Fast_Arquebus_2</TD>
+</TR>
+<TR>
+<th width="66" align="center">late arquebus</th>
+<TD>22</TD>
+<TD>120</TD>
+<TD>-1</TD>
+<TD>area attack, 12 bullets, quickest arquebus reload</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Arquebus</TD>
+<TD class="small">MTW2_Fast_Arquebus</TD>
+</TR>
+<TR>
+<th width="66" align="center">turkish musket / caliver</th>
+<TD>26</TD>
+<TD>130</TD>
+<td>&nbsp;</td>
+<TD>area attack, 12 bullets</TD>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Musket_3</TD>
+<TD class="small">MTW2_Fast_Musket_3</TD>
+</TR>
+<TR>
+<th width="66" align="center">heavy musket</th>
+<TD>32</TD>
+<TD>140</TD>
+<TD>+1</TD>
+<TD>area attack, 12 bullets</TD>
+<td class="small">&nbsp;</td>
+<td class="small">&nbsp;</td>
+<TD class="small">MTW2_Musket</TD>
+</TR>
+</table>
+<h2>MOUNTED MISSILE WEAPON</h2>
+
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Weapon Type</th>
+<th>BaseAttack</th>
+<th>BaseRange</th>
+<th>HeatPenalty</th>
+<th>Special Attributes</th>
+<th>Animation (as defined in descr_skeleton)</th>
+</TR>
+<TR>
+<th>javelin</th>
+<TD>11</TD>
+<TD>55</TD>
+<td>&nbsp;</td>
+<TD>area attack, 6 javelins(suggested)</TD>
+<TD>MTW2_HR_Javelin</TD>
+</TR>
+<TR>
+<th>short bow (skirmish)</th>
+<TD>2</TD>
+<TD>80</TD>
+<TD>-1</TD>
+<TD>area attack, 55 arrows, Simple Bow Type</TD>
+<td>MTW2_HR_Bow</TD>
+</TR>
+<TR>
+<th>short bow (missile)</th>
+<TD>1</TD>
+<TD>120</TD>
+<TD>-1</TD>
+<TD>area attack, 55 arrows, Simple Bow Type</TD>
+<td>MTW2_HR_Bow</TD>
+</TR>
+<TR>
+<th>war bow (skirmish)</th>
+<TD>3</TD>
+<TD>80</TD>
+<TD>-1</TD>
+<TD>area attack, 50 arrows, Simple Bow Type</TD>
+<td>MTW2_HR_Bow</TD>
+</TR>
+<TR>
+<th>war bow (missile)</th>
+<TD>2</TD>
+<TD>140</TD>
+<TD>-1</TD>
+<TD>area attack, 50 arrows, Simple Bow Type</TD>
+<td>MTW2_HR_Bow</TD>
+</TR>
+<TR>
+<th>composite bow (skirmish)</th>
+<TD>4</TD>
+<TD>80</TD>
+<TD>4</TD>
+<td>area attack, 45 arrows, Composite Bow Type</td>
+<td>MTW2_HR_Bow</td>
+</TR>
+<TR>
+<th>composite bow (missile)</th>
+<TD>3</TD>
+<TD>170</TD>
+<td>&nbsp;</td>
+<TD>area attack, 45 arrows, Composite Bow Type</TD>
+<td>MTW2_HR_Bow</td>
+</TR>
+<TR>
+<th>light crossbow</th>
+<TD>7</TD>
+<TD>100</TD>
+<TD>-2</TD>
+<TD>area attack, 45 bolts</TD>
+<TD>MTW2_HR_Crossbw</TD>
+</TR>
+<TR>
+<th>early cavalry pistol</th>
+<TD>8</TD>
+<TD>45</TD>
+<TD>-4</TD>
+<TD>area attack, 4 bullets, AP</TD>
+<TD>MTW2_HR_Pistol, maximum reload speed depicts carrying a brace of pistols</TD>
+</TR>
+<TR>
+<th>cavalry pistol</th>
+<TD>10</TD>
+<TD>50</TD>
+<TD>-4</TD>
+<TD>area attack, 4 bullets, AP</TD>
+<TD>MTW2_HR_Pistol, maximum reload speed depicts carrying a brace of pistols</TD>
+</TR>
+<TR>
+<th>arquebus</th>
+<TD>14</TD>
+<TD>90</TD>
+<TD>-2</TD>
+<TD>area attack, 18 bullets</TD>
+<TD>MTW2_HR_Arquebus</TD>
+</TR>
+<TR>
+<th>camel gun</th>
+<TD>22</TD>
+<TD>120</TD>
+<TD>-1</TD>
+<TD>area attack, 18 bullets</TD>
+<TD>MTW2_HR_Arquebus_Heavy</TD>
+</TR>
+</table>
+
+<h2>MISSILE WEAPON EFFECTS MODIFIER TABLE (range/damage)</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Shooter Quality</th>
+<th>Simple BowType</th>
+<th>Composite BowType</th>
+<th>Javelin</th>
+<th>CrossbowFirearm/</th>
+</TR>
+<TR>
+<th>Peasant</th>
+<TD>-30/-1</TD>
+<TD>-30/-1</TD>
+<TD>-15/-3</TD>
+<TD>-15/0</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>-20/-1</TD>
+<TD>-20/-1</TD>
+<TD>-10/-2</TD>
+<TD>-10/0</TD>
+</TR>
+<TR>
+<th>Militia</th>
+<TD>-10/0</TD>
+<TD>-10/0</TD>
+<TD>-5/-1</TD>
+<TD>-5/0</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>0/0</TD>
+<TD>0/0</TD>
+<TD>0/0</TD>
+<TD>0/0</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>+10/+1</TD>
+<TD>+10/+1</TD>
+<TD>+5/+1</TD>
+<TD>+5/0</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>+20/+1</TD>
+<TD>+20/+2</TD>
+<TD>+10/+2</TD>
+<TD>+10/0</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>+30/+2</TD>
+<TD>+30/+2</TD>
+<TD>+15/+3</TD>
+<TD>+15/0</TD>
+</TR>
+</table>
+<h2>MISSILE WEAPON SHOOTER QUALITY ADDITIONAL DAMAGE TABLE</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Shooter Quality</th>
+
+<th>Feudal</th>
+<th>Early Professional</th>
+
+<th>Late/Urban Professional</th>
+<th>Religious</th>
+<th>Mercenary</th>
+<th>Militia</th>
+<th>Local</th>
+</TR>
+
+
+<TR>
+<th>Superior</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<TD>+1</TD>
+</TR>
+</table>
+<br>
+
+<em>***This represents such aspects as compound arrowheads with a hardened steel tip, or a better quality crossbow***
+<br>
+
+###EXAMPLE: An Elite Late Professional composite bow missile archer has base damage 4, +2 for Elite Composite Bow type, +1 for Elite Late Pro = total 7. Range is 190 + 20 Elite = 210### </em>
+
+<h2>PROJECTILE TYPES (as defined in descr_projectile)</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Shooter Quality</th>
+<th >Mounted?(optional)</th>
+<th>Missile?(optional)</th>
+<th >Type</th>
+<th>Fiery?(optional)</th>
+</TR>
+
+<TR>
+<th>peasant_</th>
+<TD>mounted_</TD>
+<TD>missile_</TD>
+<TD rowspan="7" valign="top">
+arrowwar_arrow
+<br>
+longbow_arrow
+<br>
+composite_arrow
+<br>
+light_crossbow_bol
+<br>
+tcrossbow_bolt
+<br>
+heavy_crossbow_bolt
+<br>
+steel_crossbow_bolt
+<br>
+javelin
+<br>
+hand_gun_bullet
+<br>
+early_arquebus_bullet
+<br>
+arquebus_bullet
+<br>
+late_arquebus_bullet
+<br>
+caliver_bullet
+<br>
+camel_gun_bullet
+<br>
+musket_bullet</TD>
+<td>_fiery</TD>
+</TR>
+<TR>
+<th>peasant_militia_</th>
+<td rowspan="6">&nbsp;</td>
+<td rowspan="6">&nbsp;</td>
+<td rowspan="6">&nbsp;</td>
+</TR>
+<TR>
+<th>militia_</th>
+</TR>
+<TR>
+<th>average_</th>
+</TR>
+<TR>
+<th>superior_</th>
+</TR>
+<TR>
+<th>elite_</th>
+</TR>
+<TR>
+<th>exceptional_</th>
+</TR>
+</table>
+<br>
+
+<em>###EXAMPLE: An Elite composite bow missile archer has projectile type elite_missile_composite_arrow. An average warbow mounted shirmisher has average_mounted_war_arrow###</em>
+<br>
+
+<h2>FOOT 1H MELEE WEAPONS</h2>
+<table WIDTH="99%" border="1" CELLPADDING="2" CELLSPACING="0">
+  <tr>
+    <th>Weapon Type</th>
+    <th>Base Attack</th>
+    <th>Base Charge</th>
+    <th>Base Defense</th>
+    <th>Base AttackDelay</th>
+    <th>Heat Penalty</th>
+    <th>Special Attributes</th>
+    <th class="small">Slow</th>
+    <th class="small">Medium</th>
+    <th class="small">Fast</th>
+  </tr>
+  
+  <tr>
+    <th>knife</th>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>-1</td>
+    <td>0.3 x-radius</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">MTW2_Knifeman</td>
+    <td class="small">&nbsp;</td>
+    </tr>
+    
+    <tr><th>light sword (cut &amp; thrust)</th>
+    <td>3</td>
+    <td>2</td>
+    <td>5</td>
+    <td>15</td>
+    <td>-1</td>
+    <td>0.35 x-radius</td>
+    <td class="small">MTW2_Slow_Swordsman</td>
+    <td class="small">MTW2_Swordsman</td>
+    <td class="small">MTW2_Fast_Swordsman</td>
+      </tr>
+  <tr>
+    <th>arming sword (cut &amp; thrust)</th>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>30</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>long sword (cut &amp; thrust)</th>
+    <td>5</td>
+    <td>3</td>
+    <td>5</td>
+    <td>45</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>light sword (cutting)</th>
+    <td>3</td>
+    <td>2</td>
+    <td>5</td>
+    <td>15</td>
+    <td>-1</td>
+    <td>0.35 x-radius</td>
+    <td class="small">MTW2_Slow_Mace</td>
+    <td class="small">MTW2_Mace</td>
+    <td class="small">MTW2_Fast_Mace</td>
+     </tr>
+  <tr>
+    <th>arming sword (cutting)</th>
+    <td>4</td>
+    <td>3</td>
+    <td>5</td>
+    <td>30</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>falchion</th>
+    <td>6</td>
+    <td>2</td>
+    <td>3</td>
+    <td>60</td>
+    <td>0</td>
+    <td>0.35 x-radius</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>archer's mallet</th>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+    <td>45</td>
+    <td>0</td>
+    <td>AP</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>club</th>
+    <td>3</td>
+    <td>2</td>
+    <td>3</td>
+    <td>45</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>war hammer</th>
+    <td>1</td>
+    <td>3</td>
+    <td>4</td>
+    <td>45</td>
+    <td>0</td>
+    <td>AP</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>mace</th>
+    <td>2</td>
+    <td>2</td>
+    <td>4</td>
+    <td>60</td>
+    <td>+1</td>
+    <td>AP</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>axe</th>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+    <td>60</td>
+    <td>+1</td>
+    <td>AP</td>
+    <td class="small">as above</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>spear</th>
+    <td>3</td>
+    <td>3</td>
+    <td>1</td>
+    <td>60</td>
+    <td>0</td>
+    <td>0.3 x-radius, light_spear, mount_effect +4, shield +2</td>
+    <td class="small">&nbsp;</td>
+    <td class="small">MTW2_Spear</td>
+    <td class="small">MTW2_Fast_Spear</td>
+  </tr>
+  </table>
+<br>
+
+<em>***Most western swords up until the high middle ages were primarily used for cutting***<BR>
+***Percussive weapons due to unbalanced design were more tiring to handle***<BR>
+***+2 shield for spear unit represents the tactical employment of close-order spearmen - the unit is strong frontally but quite vulnerable from the flanks***</em>
+<br>
+
+<h2>FOOT 2H MELEE WEAPONS</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <th>Weapon Type</th>
+    <th>Base<br>
+        Attack</th>
+    <th>Base<br>
+        Charge</th>
+    <th>Base<br>
+        Defense</th>
+    <th>Base Attack<br>
+        Delay</th>
+    <th>Heat<br>
+        Penalty</th>
+    <th>Special Attributes</th>
+    <th width="139" align="center" class="small">Slow</th>
+    <th width="113" class="small">Medium</th>
+    <th width="130" class="small">Fast</th>
+  </tr>
+  <tr>
+    <th>estoc</th>
+    <td>4</td>
+    <td>4</td>
+    <td>6</td>
+    <td>45</td>
+    <td>+1</td>
+    <td>AP, 0.35 x-radius, mount_effect +1</td>
+    <td width="139" align="center" class="small">not done</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>light sword</th>
+    <td>7</td>
+    <td>6</td>
+    <td>6</td>
+    <td>45</td>
+    <td>+1</td>
+    <td>0.35 x-radius, mount_effect +1</td>
+    <td width="139" align="center" class="small">MTW2_Slow_2HSwordsman</td>
+    <td width="113" class="small">MTW2_2HSwordsman</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>claymore</th>
+    <td>9</td>
+    <td>6</td>
+    <td>4</td>
+    <td>75</td>
+    <td>+1</td>
+    <td>mount_effect +1</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>sword</th>
+    <td>8</td>
+    <td>6</td>
+    <td>6</td>
+    <td>60</td>
+    <td>+1</td>
+    <td>mount_effect +1</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>club</th>
+    <td>6</td>
+    <td>3</td>
+    <td>3</td>
+    <td>75</td>
+    <td>+1</td>
+    <td>mount_effect +1</td>
+    <td width="139" align="center" class="small">MTW2_Slow_2H_Axe</td>
+    <td width="113" class="small">MTW2_2H_Axe</td>
+    <td width="130" class="small">MTW2_Fast_2H_Axe</td>
+  </tr>
+  <tr>
+    <th>pike</th>
+    <td>2</td>
+    <td>4</td>
+    <td>1</td>
+    <td>90</td>
+    <td>+2</td>
+    <td>mount_effect +2, spear, long_pike, defense halved (round down)</td>
+    <td width="139" align="center" class="small">MTW2_Slow_Pike</td>
+    <td width="113" class="small">MTW2__Pike</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>spear</th>
+    <td>5</td>
+    <td>4</td>
+    <td>2</td>
+    <td>60</td>
+    <td>+1</td>
+    <td>mount_effect +2, spear</td>
+    <td width="139" align="center" class="small">&nbsp;</td>
+    <td width="113" class="small">MTW2_2H_Spear</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>axe</th>
+    <td>7</td>
+    <td>4</td>
+    <td>4</td>
+    <td>90</td>
+    <td>+2</td>
+    <td>AP, mount_effect +1</td>
+    <td width="139" align="center" class="small">MTW2_Slow_2H_Axe</td>
+    <td width="113" class="small">MTW2_2H_Axe</td>
+    <td width="130" class="small">MTW2_Fast_2H_Axe</td>
+  </tr>
+  <tr>
+    <th>hammer</th>
+    <td>5</td>
+    <td>5</td>
+    <td>5</td>
+    <td>75</td>
+    <td>+2</td>
+    <td>AP, mount_effect +2</td>
+    <td width="139" align="center" class="small">MTW2_Slow_2H_Poleaxe</td>
+    <td width="113" class="small">MTW2_2H_Poleaxe</td>
+    <td width="130" class="small">MTW2_Fast_2H_Poleaxe</td>
+  </tr>
+  <tr>
+    <th>poleaxe</th>
+    <td>6</td>
+    <td>5</td>
+    <td>5</td>
+    <td>90</td>
+    <td>+2</td>
+    <td>AP, mount_effect +2</td>
+    <td width="139" align="center" class="small">MTW2_Slow_2H_Poleaxe</td>
+    <td width="113" class="small">MTW2_2H_Poleaxe</td>
+    <td width="130" class="small">MTW2_Fast_2H_Poleaxe</td>
+  </tr>
+  <tr>
+    <th>improvised farm tool</th>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+    <td>105</td>
+    <td>+2</td>
+    <td>AP, mount_effect +2, already 'Rustic</td>
+    <td width="139" align="center" class="small">'MTW2_Slow_Halberd_Secondary</td>
+    <td width="113" class="small">MTW2_Halberd_Secondary</td>
+    <td width="130" class="small">MTW2_Fast_Halberd_Secondary</td>
+  </tr>
+  <tr>
+    <th>halberd</th>
+    <td>6</td>
+    <td>5</td>
+    <td>5</td>
+    <td>120</td>
+    <td>+2</td>
+    <td>AP, mount_effect +6</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>billhook</th>
+    <td>5</td>
+    <td>5</td>
+    <td>4</td>
+    <td>90</td>
+    <td>+2</td>
+    <td>AP, mount_effect +4</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>voulge</th>
+    <td>6</td>
+    <td>5</td>
+    <td>4</td>
+    <td>105</td>
+    <td>+2</td>
+    <td>AP, mount_effect +6</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>swordstaff</th>
+    <td>8</td>
+    <td>5</td>
+    <td>5</td>
+    <td>75</td>
+    <td>+1</td>
+    <td>mount_effect +4</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>halberd (phalanx)</th>
+    <td>6</td>
+    <td>5</td>
+    <td>7</td>
+    <td>120</td>
+    <td>+2</td>
+    <td>AP, mount_effect +2, light_spear, phalanx formation</td>
+    <td width="139" align="center" class="small">&nbsp;</td>
+    <td width="113" class="small">MTW2_Halberd_Primary</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>billhook (phalanx)</th>
+    <td>5</td>
+    <td>5</td>
+    <td>6</td>
+    <td>90</td>
+    <td>+2</td>
+    <td>AP, light_spear, phalanx formation</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>voulge (phalanx)</th>
+    <td>6</td>
+    <td>5</td>
+    <td>6</td>
+    <td>105</td>
+    <td>+2</td>
+    <td>AP, mount_effect +2, light_spear, phalanx formation</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+  <tr>
+    <th>swordstaff (phalanx)</th>
+    <td>8</td>
+    <td>5</td>
+    <td>7</td>
+    <td>75</td>
+    <td>+1</td>
+    <td>light_spear, phalanx formation</td>
+    <td width="139" align="center" class="small">as above</td>
+    <td width="113" class="small">&nbsp;</td>
+    <td width="130" class="small">&nbsp;</td>
+  </tr>
+</table>
+<br>
+
+<em>***'Aggressive' animation sets make the unit push forward more strongly in melee. Mostly useful against pikes***</em>
+<br>
+
+<h2>MOUNTED MELEE WEAPONS</h2>
+<table WIDTH="99%" CELLPADDING="2" CELLSPACING="0" border="1">
+<TR>
+<th>Weapon Type</th>
+<th>BaseAttack</th>
+<th>BaseCharge</th>
+<th>BaseDefense</th>
+<th>Base AttackDelay</th>
+<th>HeatPenalty</th>
+<th>Special Attributes</th>
+<th>Animation (as defined in descr_skeleton)</th>
+</TR>
+<TR>
+<th>light sword (western)</th>
+<TD>3</TD>
+<TD>4</TD>
+<TD>5</TD>
+<TD>30</TD>
+<TD>-1</TD>
+<TD>Charge Distance 20m</TD>
+<TD>MTW2_HR_Sword</TD>
+</TR>
+<TR>
+<th>arming sword (western)</th>
+<TD>4</TD>
+<TD>5</TD>
+<TD>5</TD>
+<TD>45</TD>
+<TD>0</TD>
+<TD>Charge Distance 20m</TD>
+<TD>as above</TD>
+</TR>
+<TR>
+<th>long sword (western)</th>
+<TD>5</TD>
+<TD>5</TD>
+<TD>5</TD>
+<TD>60</TD>
+<TD>0</TD>
+<TD>Charge Distance 20m</TD>
+<TD>as above</TD>
+</TR>
+<TR>
+<th>light sword (eastern)</th>
+<TD>3</TD>
+<TD>4</TD>
+<TD>5</TD>
+<TD>30</TD>
+<TD>-1</TD>
+<TD>Charge Distance 20m</TD>
+<TD>MTW2_HR_Mace</TD>
+</TR>
+<TR>
+<th>arming sword (eastern)</th>
+<TD>4</TD>
+<TD>5</TD>
+<TD>5</TD>
+<TD>45</TD>
+<TD>0</TD>
+<TD>Charge Distance 20m</TD>
+<TD>as above</TD>
+</TR>
+<TR>
+<th>horseman's hammer</th>
+<TD>0</TD>
+<TD>5</TD>
+<TD>4</TD>
+<TD>60</TD>
+<TD>0</TD>
+<TD>AP, Charge Distance 20m</TD>
+<TD>as above</TD>
+</TR>
+<TR>
+<th>horseman's mace</th>
+<TD>1</TD>
+<TD>4</TD>
+<TD>4</TD>
+<TD>75</TD>
+<TD>+1</TD>
+<TD>AP, Charge Distance 20m</TD>
+<TD>as above</TD>
+</TR>
+<TR>
+<th>hatchet</th>
+<TD>2</TD>
+<TD>4</TD>
+<TD>3</TD>
+<TD>75</TD>
+<TD>+1</TD>
+<TD>AP, Charge Distance 20m</TD>
+<TD>as above</TD>
+</TR>
+</table>
+<BR>
+
+<em>***Horseman's AP weapons are somewhat lighter as the rider does not have the body mechanics when mounted to employ weapons of such weight as a footman might use***<BR>
+***Maximum sword size from a pony is light sword***</em>
+<h2>MOUNTED CHARGE WEAPONS</h2>
+<table WIDTH="99%" border="1" CELLPADDING="2" CELLSPACING="0">
+<TR>
+<th>Weapon Type</th>
+<th>BaseAttack</th>
+<th>BaseCharge</th>
+<th>BaseDefense</th>
+<th>Base Attack Delay</th>
+<th>Heat Penalty</th>
+<th>Special Attributes</th>
+<th>Animation (as defined in descr_skeleton)</th>
+</TR>
+<TR>
+<th>spear</th>
+<TD>2</TD>
+<TD>6</TD>
+<td>&nbsp;</td>
+<TD>45</TD>
+<TD>0</TD>
+<TD>Charge Distance 20m, Large Round or Kite Shield Attack -1</TD>
+<TD>MTW2_HR_Spear</TD>
+</TR>
+<TR>
+<th>non-couched light lance</th>
+<TD>3</TD>
+<TD>7</TD>
+<td>&nbsp;</td>
+<TD>60</TD>
+<TD>+1</TD>
+<TD>Charge Distance 30m, Large Round or Kite Shield Attack -1</TD>
+<td>MTW2_HR_Spear</TD>
+</TR>
+<TR>
+<th>couched light lance</th>
+<TD>1</TD>
+<TD>11</TD>
+<td>&nbsp;</td>
+<TD>90</TD>
+<TD>+1</TD>
+<TD>Charge Distance 45m, Large Round or Kite Shield Attack -1</TD>
+<td>MTW2_HR_Lance</TD>
+</TR>
+<TR>
+<th>couched lance</th>
+<TD>0</TD>
+<TD>13</TD>
+<td>&nbsp;</td>
+<TD>105</TD>
+<TD>+2</TD>
+<TD>Charge Distance 45m, Large Round or Kite Shield Attack -1</TD>
+<TD>MTW2_HR_Lance</TD>
+</TR>
+<TR>
+<th>braced lance</th>
+<TD>0</TD>
+<TD>14</TD>
+<td>&nbsp;</td>
+<TD>105</TD>
+<TD>+2</TD>
+<TD>Charge Distance 45m, Large Round or Kite Shield Attack -1</TD>
+<TD>MTW2_HR_Lance</TD>
+</TR>
+<TR>
+<th>heavy lance</th>
+<TD>0</TD>
+<TD>15</TD>
+<td>&nbsp;</td>
+<TD>120</TD>
+<TD>+3</TD>
+<TD>Charge Distance 45m, Cannot use shield</TD>
+<td>&nbsp;</td>
+</TR></table>
+<br>
+<em>***Braced lance can only be used if the unit starts with Full Plate or Gothic Plate***
+***Heavy lance can only be used without a shield and as such will receive +1 attack and -15 attack delay as specified in the next table***
+***Maximum charge weapon size from a pony is a spear***
+***These weapons all use MTW2_HR_Lance_Primary because MTW2_HR_Spear_Primary is bugged***</em>
+<br>
+<h2>MELEE and CHARGE WEAPON EFFECTS MODIFIERS</h2>
+<table WIDTH="99%" border="1" CELLPADDING="2" CELLSPACING="0">
+
+<TR>
+<th>Weapon Type</th>
+<th>BaseAttack</th>
+<th>BaseCharge</th>
+<th>BaseDefense</th>
+<th>Base AttackDelay</th>
+<th>Heat Penalty</th>
+<th>Additional Information</th>
+</TR>
+
+
+<TR>
+<th>1H Melee, no shield</th>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>-15</TD>
+<td>&nbsp;</td>
+<td>for all melee weapons foot or mounted except knife</TD>
+</TR>
+<TR>
+<th>Mtd Charge, no shield</th>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>-15</TD>
+<td>&nbsp;</td>
+<td>for all mounted charge weapons</TD>
+</TR>
+<TR>
+<th>'Rustic', eg Wood axe</th>
+<TD>-1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>+15</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Kata/Multi-Layer armor</th>
+<TD>-1</TD>
+<td>&nbsp;</td>
+<TD>-1</TD>
+<TD>+15</TD>
+<td colspan="2">+2 additional heat for first extra layer, +1 additional heat for second extra layer</TD>
+</TR>
+</table>
+<br>
+<h2>MELEE WEAPON QUALITY ADDITIONAL DAMAGE TABLE <p class="line">....(not applicable to mounted charge weapons)</p></h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR align="right">
+<th>Melee Quality</th>
+<th>Feudal</th>
+<th>Early Professional</th>
+<th>Late/Urban Professional</th>
+<th>Religious</th>
+<th>Mercenary</th>
+<th>Militia</th>
+<th>Local</th>
+</TR>
+
+<TR>
+<th>Superior</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Elite</th>
+<td>+1</td>
+<td>&nbsp;</td>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>&nbsp;</TD>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Exceptional</th>
+<td>+1</td>
+<td>+1</td>
+<TD>+1</TD>
+<TD>+1</TD>
+<td>+1</td>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+</TR></table>
+<br>
+
+<em>***Note this table depends on the unit's Melee Quality, which is one level less than shooting level for skirmishers, and two less for missile units***</em>
+<br>
+<h2>UNIT QUALITY MODIFIERS TABLE
+  <p class="line">....Foot, melee weapon non-spear/pike</p></h2>
+
+<table WIDTH="99%" border="1" CELLPADDING="2" CELLSPACING="0">
+<TR>
+<th>Quality</th>
+<th>Attack</th>
+<th>Charge</th>
+<th>Defense Attack Delay</th>
+<th>Attack Delay</th>
+<th>Heat Penalty</th>
+</TR>
+<TR>
+<th>Peasant</th>
+<TD>-3</TD>
+<TD>-1</TD>
+<TD>-3</TD>
+<TD>+45</TD>
+
+<td>+3</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>-2</TD>
+<TD>-1</TD>
+<TD>-2</TD>
+<TD>+30</TD>
+
+<TD>+2</TD>
+</TR>
+<TR>
+<th>Militia</th>
+<TD>-1</TD>
+<TD>-1</TD>
+<TD>-1</TD>
+<TD>+15</TD>
+<TD>+1</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+</TR>
+<TR>
+<th>Superior</th>
+
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+2</TD>
+<TD>-15</TD>
+
+<td>-1</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>+3</TD>
+<td>&nbsp;</td>
+<TD>+3</TD>
+<TD>-30</TD>
+<TD>-2</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+
+<TD>+4</TD>
+<TD>+1</TD>
+<TD>+4</TD>
+<TD>-45</TD>
+
+<td>-3</TD>
+</TR>
+</table>
+<br>
+<h2>UNIT QUALITY MODIFIERS TABLE</h2>
+<h3>Foot, melee weapon non-spear/pike</h3>
+<table WIDTH="99%" border="1" CELLPADDING="2" CELLSPACING="0">
+<tr>
+<th>Quality</th>
+<th>Attack</th>
+<th>Charge</th>
+<th>Defense</th>
+<th>Attack Delay</th>
+<th>Heat Penalty</th>
+</TR>
+<TR>
+<th>Peasant</th>
+<TD>-3</TD>
+<TD>-1</TD>
+<TD>-3</TD>
+<TD>+45</TD>
+<TD>+3</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>-2</TD>
+<TD>-1</TD>
+<TD>-2</TD>
+<TD>+30</TD>
+<TD>+2</TD>
+</TR>
+<TR>
+<th>Militia</th>
+<TD>-1</TD>
+<TD>-1</TD>
+<TD>-1</TD>
+<TD>+15</TD>
+<TD>+1</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+2</TD>
+<TD>-15</TD>
+<TD>-1</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>+3</TD>
+<TD>+1</TD>
+<TD>+3</TD>
+<TD>-30</TD>
+<TD>-2</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>+4</TD>
+<TD>+1</TD>
+<TD>+4</TD>
+<TD>-45</TD>
+<TD>-3</TD>
+</TR>
+</table>
+<br>
+
+<h3>Foot, melee weapon spear or pike</h3>
+<table border="1" cellpadding="2" cellspacing="0">
+    <tr>
+<th>Quality</th>
+<th>Attack</th>
+<th>Charge</th>
+<th>Defense</th>
+<th> Attack Delay</th>
+<th>Heat Penalty</th>
+</tr>
+<TR>
+<th>Peasant</th>
+<TD>-3</TD>
+<TD>-1</TD>
+<TD>-3</TD>
+<TD>+45</TD>
+<TD>+3</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>-2</TD>
+<TD>-1</TD>
+<TD>-2</TD>
+<TD>+30</TD>
+<TD>+2</TD>
+</TR>
+<TR>
+<th>Militia</th>
+<TD>-1</TD>
+<TD>-1</TD>
+<TD>-1</TD>
+<TD>+15</TD>
+<TD>+1</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>-15</TD>
+<TD>-1</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>+2</TD>
+<TD>+1</TD>
+<TD>+2</TD>
+<TD>-30</TD>
+<TD>-2</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>+3</TD>
+<TD>+1</TD>
+<TD>+3</TD>
+<TD>-45</TD>
+<TD>-3</TD>
+</TR>
+</table>
+<br>
+
+<h3>Mounted, all melee and charge weapons</h3>
+<table border="1" CELLPADDING="2" CELLSPACING="0">
+<TR>
+<th>Quality</th>
+<th>Attack</th>
+<th>Charge</th>
+<th>Defense Attack Delay</th>
+<th>Heat Penalty</th>
+</TR>
+<TR>
+<th>Peasant</th>
+<TD>-1</TD>
+<TD>-5</TD>
+<TD>+45</TD>
+<TD>+3</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>0</TD>
+<TD>-4</TD>
+<TD>+30</TD>
+<td>+2</TD>
+</TR>
+<TR>
+<th>Militia</th>
+<TD>+1</TD>
+<TD>-3</TD>
+<TD>+15</TD>
+<TD>+1</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>+2</TD>
+<TD>-2</TD>
+<TD>0</TD>
+<TD>0</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>+3</TD>
+<TD>0</TD>
+<TD>-15</TD>
+<TD>-1</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>+5</TD>
+<TD>+1</TD>
+<TD>-30</TD>
+<TD>-2</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>+6</TD>
+<TD>+2</TD>
+<TD>-45</TD>
+<TD>-3</TD>
+</TR>
+</table>
+ <br>
+
+<em>SKIRMISH UNITS MELEE AT ONE LEVEL LESS THAN THEIR SHOOTING LEVEL<BR>
+MISSILE UNITS MELEE AT TWO LEVELS LESS THAN THEIR SHOOTING LEVEL</em>
+<br>
+<br>
+
+<h3>MELEE and CHARGE WEAPON SPECIAL CONDITIONS EFFECTS MODIFIERS (start at STEP 1)</h3>
+<table WIDTH="99%" CELLPADDING="1" CELLSPACING="0" border="1">
+<tr>
+<th width="16%">Condition</th>
+<th width="5%">Base<br>
+ Attack</th>
+<th width="7%">Base<br>
+ Charge </th>
+<th width="10%">Base<br>
+ Defense </th>
+<th width="10%">Base Attack<br>
+ Delay</th>
+<th width="7%">Heat</th>
+<th width="46%">Special Attributes</th>
+</TR>
+</table>
+<h3>STEP 1</h3>
+<table WIDTH="99%" border="1" cellpadding="1" cellspacing="0">
+<TR>
+<TD width="16%">-15 attack delay?</TD>
+<TD width="5%">+1</TD>
+<TD width="7%">&nbsp;</TD>
+<td width="10%">&nbsp;</td>
+<td width="10%">+15</td>
+<td width="7%">&nbsp;</td>
+<TD width="46%" class="small">ie if attack delay is calculated at -15 then +1 attack and set attack delay to zero, goto STEP 2</TD>
+</TR>
+<TR>
+<td>-30 attack delay?</td>
+<TD>+2</TD>
+<td>&nbsp;</td>
+<TD>&nbsp;</TD>
+<TD>+30</TD>
+<td>&nbsp;</td>
+<TD class="small">e if attack delay is calculated at -30 then +2 attack and set attack delay to zero, goto STEP 2</TD>
+</TR>
+</table>
+<h3>STEP 2</h3>
+<table WIDTH="99%" border="1" cellpadding="1" cellspacing="0">
+<TR>
+<td width="16%">-1 defense?</td>
+<TD width="5%">-1</TD>
+<td width="7%">&nbsp;</td>
+<TD width="10%">+1</TD>
+<td width="10%">&nbsp;</td>
+<TD width="7%">&nbsp;</TD>
+<TD width="46%" class="small">ie if defense is calculated at -1 then -1 attack and set defense to zero, goto STEP 4</TD>
+</TR>
+<TR>
+<td width="16%">-2 defense?</td>
+<TD width="5%">-2</TD>
+<td width="7%">&nbsp;</td>
+<TD width="10%">+2</TD>
+<td width="10%">&nbsp;</td>
+<TD width="7%">&nbsp;</TD>
+<TD width="46%" class="small">ie if defense is calculated at -2 then -2 attack and set defense to zero, goto STEP 4</TD>
+</TR>
+</table>
+<h3>STEP 3</h3>
+<table WIDTH="99%"  border="1" cellpadding="2" cellspacing="0">
+<TR>
+<td width="16%">0 attack?</td>
+<TD width="5%">+1</TD>
+<td width="7%">&nbsp;</td>
+<TD width="10%">-1</TD>
+<td width="10%">&nbsp;</td>
+<TD width="7%">&nbsp;</TD>
+<TD width="46%" class="small">ie if attack is calculated at 0 then set attack to 1</TD>
+</TR>
+<TR>
+<td width="16%">-1 attack?</td>
+<TD width="5%">+2</TD>
+<td width="7%">&nbsp;</td>
+<TD width="10%">-2</TD>
+<td width="10%">&nbsp;</td>
+<TD width="7%">&nbsp;</TD>
+<TD width="46%" class="small">ie if attack is calculated at -1 then set attack to 1 and -2 defense</TD>
+</TR>
+<TR>
+<td width="16%">-2 attack?</td>
+<TD width="5%">+3</TD>
+<td width="7%">&nbsp;</td>
+<TD width="10%">-3</TD>
+<td width="10%">&nbsp;</td>
+<TD width="7%">&nbsp;</TD>
+<TD width="46%" class="small">ie if attack is calculated at -2 then set attack to 1 and -3 defense</TD>
+</TR>
+</table>
+<h3>STEP 4</h3>
+<table WIDTH="99%" border="1" cellpadding="2" cellspacing="0">
+<TR>
+<td width="16%">0 attack?</td>
+<TD width="5%">+1</TD>
+<td width="7%">&nbsp;</td>
+<TD width="10%">&nbsp;</TD>
+<td width="10%">+15</td>
+<TD width="7%">&nbsp;</TD>
+<TD width="46%" class="small">ie if attack is calculated at 0 then set attack to 1 and +15 attack delay</TD>
+</TR>
+<TR>
+<td>-1 attack?</td>
+<TD>+2</TD>
+<td>&nbsp;</td>
+<TD>&nbsp;</TD>
+<td>+30</td>
+<TD>&nbsp;</TD>
+<TD class="small">ie if attack is calculated at -1 then set attack to 1 and +30 attack delay</TD>
+</TR>
+<TR>
+<td>-2 attack?</td>
+<TD>+3</TD>
+<td>&nbsp;</td>
+<TD>&nbsp;</TD>
+<td>+45</td>
+<TD>&nbsp;</TD>
+<TD class="small">ie if attack is calculated at -2 then set attack to 1 and +45 attack delay</TD>
+</TR>
+</table>
+<br>
+
+
+<em>Note: these are only very rarely needed.
+
+
+<BR>
+OPTIONAL UNIT TYPES<BR>
+Bodyguard: -2 attack, +2 defense<BR>
+Guard: -1 attack, +1 defense, better-quality units are disciplined<BR>
+Impetuous: +1 attack, -1 defense, impetuous<BR>
+Reckless: +2 attack, -2 defense, impetuous<BR>
+Fanatic: +2 attack, -3 defense, impetuous, lock_morale<BR>
+Desperate: +1 attack, -2 defense, lock_morale
+Attack bonuses and penalties are to non-missile weapons only.<BR>
+See Morale table for morale implications of these unit types.</em>
+<BR>
+<h2>MASTER ARMOR TABLE</h2>
+
+<table WIDTH="99%" border="1" CELLPADDING="2" CELLSPACING="0">
+<TR>
+<th>Armor Type</th>
+<th>Upgrade Level</th>
+<th>Smith Needed</th>
+<th>Armor</th>
+<th>Heat Penalty</th>
+<th>Joules to Penetrate</th>
+<th>Move Anim</th>
+<th>Agility Defense Bonus</th>
+<th>Terrain Penalties</th>
+<th>Mass</th>
+</TR>
+<TR>
+<th>Unarmored</th>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<TD>0</TD>
+<td>&nbsp;</td>
+<TD>Fast(1)</TD>
+<TD>+3</TD>
+<TD>Light(1)</TD>
+<TD>0</TD>
+</TR>
+<TR>
+<th>Leather</th>
+<TD>1</TD>
+<TD>1</TD>
+<TD>2</TD>
+<TD>1</TD>
+<TD>25</TD>
+<TD>Fast(1)</TD>
+<TD>+2</TD>
+<TD>Light(1)</TD>
+<TD>1</TD>
+</TR>
+<TR>
+<th>Gambeson</th>
+<TD>2</TD>
+<TD>1</TD>
+<TD>2+1def</TD>
+<TD>2</TD>
+<TD>40</TD>
+<TD>Fast(1)</TD>
+<TD>+2</TD>
+<TD>Light(1)</TD>
+<TD>1</TD>
+</TR>
+<TR>
+<th>Leather Lamellar</th>
+<TD>3</TD>
+<TD>1</TD>
+<TD>3</TD>
+<TD>2</TD>
+<td>&nbsp;</td>
+<TD>Fast(1)</TD>
+<TD>+2</TD>
+<TD>Light(1)</TD>
+<TD>1</TD>
+</TR>
+<TR>
+<th>Light Brigandine</th>
+<TD>4</TD>
+<TD>2</TD>
+<TD>4</TD>
+<TD>4</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>2</TD>
+</TR>
+<TR>
+<th>Light Lamellar/Scale</th>
+<TD>5</TD>
+<TD>2</TD>
+<TD>5</TD>
+<TD>4</TD>
+<TD>70</TD>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>2</TD>
+</TR>
+<TR>
+<th>Partial Light Mail</th>
+<TD>6</TD>
+<TD>2</TD>
+<TD>4</TD>
+<TD>3</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>2</TD>
+</TR>
+<TR>
+<th>Light Mail</th>
+<TD>7</TD>
+<TD>2</TD>
+<TD>4+1def</TD>
+<TD>3</TD>
+<TD>70/55 vs missiles</TD>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>2</TD>
+</TR>
+<TR>
+<th>Buff Coat</th>
+<TD>8</TD>
+<TD>3</TD>
+<TD>5</TD>
+<TD>3</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>2</TD>
+</TR>
+<TR>
+<th>Lamellar/Scale</th>
+
+<TD>9 </TD>
+<TD>3</TD>
+<TD>7</TD>
+<TD>6</TD>
+<TD>100</TD>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>3</TD>
+</TR>
+<TR>
+<th>Partial Heavy Mail</th>
+<TD>10</TD>
+<TD>3</TD>
+<TD>6</TD>
+<TD>5</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>3</TD>
+</TR>
+<TR>
+<th>Heavy Mail</th>
+<TD>11</TD>
+<TD>3</TD>
+<TD>6+1def</TD>
+<TD>5</TD>
+<TD>100/85 vs missiles</TD>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>3</TD>
+</TR>
+<TR>
+<th>Brigandine</th>
+<TD>12</TD>
+<TD>3</TD>
+<TD>6</TD>
+<TD>6</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>3</TD>
+</TR>
+<TR>
+<th>Splint, Coat of Plates</th>
+<TD>13</TD>
+<TD>4</TD>
+<TD>8+1def</TD>
+<TD>6</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>4</TD>
+</TR>
+<TR>
+<th>Heavy Lamellar/Scale</th>
+<TD>14</TD>
+<TD>4</TD>
+<TD>9</TD>
+<TD>7</TD>
+<TD>125</TD>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>4</TD>
+</TR>
+<TR>
+<th>Heavy Brigandine</th>
+<TD>15</TD>
+<TD>4</TD>
+<TD>8</TD>
+<TD>7</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>4</TD>
+</TR>
+<TR>
+<th>Partial Plate</th>
+<TD>16</TD>
+<TD>4</TD>
+<TD>11</TD>
+<TD>7</TD>
+<TD>100-160</TD>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Breastplate</th>
+<TD>17</TD>
+<TD>4</TD>
+<TD>7</TD>
+<TD>3</TD>
+<td>&nbsp;</td>
+<TD>Fast(1)</TD>
+<TD>+1</TD>
+<TD>Light(1)</TD>
+<TD>2</TD>
+</TR>
+<TR>
+<th>Heavy Splint</th>
+<TD>18</TD>
+<TD>5</TD>
+<TD>10+1def 8</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Kataphract</th>
+<TD>19</TD>
+<TD>5</TD>
+<TD>Special</TD>
+<td> Special</td>
+<td>&nbsp;</td>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Late Lamellar</th>
+<TD>19</TD>
+<TD>5</TD>
+<TD>11</TD>
+<TD>8</TD>
+<td>&nbsp;</td>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Late Brigandine</th>
+<TD>20</TD>
+<TD>5</TD>
+<TD>10</TD>
+<TD>7</TD>
+<td>&nbsp;</td>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Full Plate</th>
+<TD>21</TD>
+<TD>5</TD>
+<TD>13</TD>
+<TD>7</TD>
+<TD>160</TD>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Improved Metallurgy</th>
+<TD>22</TD>
+<TD>5</TD>
+<TD>+2</TD>
+<TD>-</TD>
+<td>&nbsp;</td>
+<TD>&nbsp;</td>
+<TD>&nbsp;</td>
+<TD>&nbsp;</td>
+<TD>&nbsp;</td>
+</TR>
+<TR>
+<th>Gothic Plate</th>
+<TD>23</TD>
+<TD>6</TD>
+<TD>15</TD>
+<TD>8</TD>
+<TD>185</TD>
+<TD>Slow(3)</TD>
+<TD>0</TD>
+<TD>Heavy(3)</TD>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Renaissance Half Plate</th>
+<TD>24</TD>
+<TD>6</TD>
+<TD>9</TD>
+<TD>4</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>+1</TD>
+<TD>Medium(2)</TD>
+<TD>3</TD>
+</TR>
+<TR>
+<th>Advanced Metallurgy</th>
+<TD>25</TD>
+<TD>6</TD>
+<td>+2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Renaissance 3Q Plate</th>
+<TD>26</TD>
+<TD>6</TD>
+<TD>11</TD>
+<TD>5</TD>
+<td>&nbsp;</td>
+<TD>Med(2)</TD>
+<TD>0</TD>
+<TD>Medium(2)</TD>
+<TD>4</TD>
+</TR>
+<TR>
+<th>Greater Armor Thickness</th>
+<TD>27</TD>
+<td>6</td>
+<td>+2</td>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>Average over all armor upgrades:</th>
+<td>&nbsp;</td>
+<TD>&nbsp;</TD>
+<td>&nbsp;</td>
+<td>Yes</td>
+<td>&nbsp;</td>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<TD>Yes</TD>
+<td>Yes</td>
+</TR>
+<TR>
+<th>Round fractions of 0.5</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>&nbsp;</TD>
+<td>down</td>
+<TD>up</TD>
+<TD>down</TD>
+<TD>down</TD>
+</TR>
+</table>
+<br>
+
+<em>Fractions less than 0.5 are rounded down.
+<br>
+Fractions greater than 0.5 are rounded up.
+<br>
+Agility Defense Bonus is ONLY FOR FOOT UNITS.
+<br>
+Terrain Penalties are found in the final table in this guide.
+<br>
+###EXAMPLE: The unit has armor upgrades 0, 1, 4, 12
+<br>
+Heat = (0+2+4+6)/4 = 3.
+<br>
+Move Anim = (1+1+2+2)/4 = 1.5 = 1 => Fast
+<br>
+Agility Defense Bonus = (3+2+1+1)/4 = 1.75 => +2 defense
+<br>
+Terrain Penalty = (1+1+2+2)/4 = 1.5 = 1 => Light Infantry
+<br>
+Mass = (0+1+2+3)/4 = 1.5 = 1 => base mass 0.8 (from UNIT MASS table on first page)###</em>
+<br>
+
+<h2>ARMOR QUALITY ADDITIONAL PROTECTION TABLE</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<tr><th width="94">Quality</th>
+<th width="56">Feudal</th>
+<th width="142">EarlyProfessional</th>
+<th width="191">Late/UrbanProfessional</th>
+<th width="76">Religious</th>
+<th width="85">Mercenary</th>
+<th width="48">Militia</th>
+<th COLSPAN="7">Local</th>
+</tr>
+
+<TR>
+<th>Superior</th>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<TD>+1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td></TR>
+<TR>
+<th>Elite</th>
+
+<TD>+2</TD>
+<TD>+1</TD>
+<td>+1</td>
+<TD>+1</TD>
+<td>+1</td>
+<TD>&nbsp;</TD>
+<TD COLSPAN="8">&nbsp;</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+
+<TD>+2</TD>
+<TD>+1</TD>
+<td>+1</td>
+<TD>+1</TD>
+<TD>+1</TD>
+<TD>&nbsp;</TD>
+
+<TD>+1</TD>
+</TR></table>
+<br>
+<em>***This table applies whether the unit is melee, skirmish or missile, ie Elite Early Professional Skirmishers get +1 armor*** </em>
+<br>
+<h2>FOOTMAN'S SHIELDS</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Shield Type</th>
+<th>Shield</th>
+<th>Defense
+<br>
+Bonus</th>
+<th>Heat<br>
+Penalty</th>
+<th>Other</th>
+</TR>
+
+<TR>
+<th>strapped to back</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<TD>+1</TD>
+<TD>Armor +1</TD>
+</TR>
+<TR>
+<th>archer�s/small buckler</th>
+<TD>1</TD>
+<TD>+1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>buckler</th>
+<TD>2</TD>
+<TD>+1</TD>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>small round</th>
+<TD>3</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>heater</th>
+<TD>3</TD>
+<TD>+1</TD>
+<TD>+1</TD>
+<td>&nbsp;</td>
+</TR>
+<TR>
+<th>large round</th>
+<TD>5</TD>
+<td>&nbsp;</td>
+<TD>+2</TD>
+<TD>mov_speed_mod 0.9</TD>
+</TR>
+<TR>
+<th>kite</th>
+<TD>5</TD>
+<td>&nbsp;</td>
+<TD>+2</TD>
+<TD>mov_speed_mod 0.9</TD>
+</TR>
+<TR>
+<th>pavise</th>
+<TD>7</TD>
+<TD>-2</TD>
+<TD>+3</TD>
+<TD>mov_speed_mod 0.8</TD>
+</TR></table>
+<BR>
+<h2>HORSEMAN'S SHIELDS</h2>
+
+<table border="1" cellpadding="2" cellspacing="0">
+  <tr>
+    <th>Shield Type</th>
+    <th>Shield</th>
+    <th>Defense<br>
+        Bonus</th>
+    <th>Heat<br>
+        Penalty</th>
+    <th>Other</th>
+  </tr>
+  <tr>
+    <th>strapped to back</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>+1</td>
+    <td>Armor +1</td>
+  </tr>
+  <tr>
+    <th>small buckler</th>
+    <td>1</td>
+    <td>+1</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>buckler</th>
+    <td>2</td>
+    <td>+1</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>small round</th>
+    <td>3</td>
+    <td>&nbsp;</td>
+    <td>+1</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>heater</th>
+    <td>3</td>
+    <td>&nbsp;</td>
+    <td>+1</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>large round</th>
+    <td>4</td>
+    <td>-1</td>
+    <td>+2</td>
+    <td>Mounted Charge Weapons Attack -1</td>
+  </tr>
+  <tr>
+    <th>kite</th>
+    <td>5</td>
+    <td>-1</td>
+    <td>+2</td>
+    <td>Mounted Charge Weapons Attack -1</td>
+  </tr>
+</table>
+<br>
+
+<em>All units with melee quality Peasant Militia or worse: -1 shield for quality</em><br>
+<h2>MORALE</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Quality</th>
+<th>    Base Morale</th>
+</TR>
+
+<TR>
+<th>Peasant</th>
+<TD>4</TD>
+</TR>
+<TR>
+<th>Peasant Militia</th>
+<TD>5</TD>
+</TR>
+<TR>
+<th>Militia</th>
+<TD>7</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>9</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>12</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>14</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>16</TD>
+</TR>
+</table>
+<br>
+<br>
+
+
+<table border="1" cellpadding="2" cellspacing="0">
+<tr>
+<th width="150">Modifiers (cumulative)</th>
+<th width="25">&nbsp;</th>
+<th width="200">Discipline Guide</th>
+</TR
+></table>
+<br>
+
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th width="150">untrained</th>
+<TD width="25">-1</TD>
+<TD width="200">More likely to be Low</TD>
+</TR>
+<TR>
+<th width="150">highly_trained</th>
+<TD width="25">+1</TD>
+<TD width="200">More likely to be Disciplined</TD>
+</TR>
+<TR>
+<th width="150">Feudal</th>
+<TD width="25">+2</TD>
+<TD width="200">Low or Impetuous</TD>
+</TR>
+<TR>
+<th width="150">Local</th>
+<TD width="25">-1</TD>
+<TD width="200">Any but usually Low</TD>
+</TR>
+<TR>
+<th width="150">Rural</th>
+<TD width="25">-1</TD>
+<TD width="200">Low or Impetuous</TD>
+</TR>
+<TR>
+<th width="150">Urban Militia</th>
+<TD width="25">-1</TD>
+<TD width="200">Low or Normal</TD>
+</TR>
+<TR>
+<th width="150">Religious</th>
+<TD width="25">+2</TD>
+<TD width="200">Any</TD>
+</TR>
+<TR>
+<th width="150">Early Professional</th>
+<TD width="25">-1</TD>
+<TD width="200">Low but usually Normal</TD>
+</TR>
+<TR>
+<th width="150">Late Professional</th>
+<TD width="25">0</TD>
+<TD width="200">Normal or Disciplined</TD>
+</TR>
+<TR>
+<th width="150">Italian Mercenary</th>
+<TD width="25">-3</TD>
+<TD width="200">Low</TD>
+</TR>
+<TR>
+<th width="150">CatalanMercenary</th>
+<TD width="25">-3</TD>
+<TD width="200">Low</TD>
+</TR>
+<TR>
+<th width="150">FlemishMercenary</th>
+<TD width="25">-1</TD>
+<TD width="200">Normal</TD>
+</TR>
+<TR>
+<th width="150">Irish, Welsh, Scots Merc</th>
+<TD width="25">-1</TD>
+<td width="200">Low or Normal</td>
+</TR>
+<TR>
+<th width="150">Viking Mercenary</th>
+<TD width="25">-1</TD>
+<TD width="200">Normal</TD>
+</TR>
+<TR>
+<th width="150">Early German Mercenary</th>
+<TD width="25">-1</TD>
+<TD width="200">Low or Normal</TD>
+</TR>
+<TR>
+<th width="150">Late German Mercenary</th>
+<TD width="25">0</TD>
+<TD width="200">Disciplined</TD>
+</TR>
+<TR>
+<th width="150">Serbian Mercenary</th>
+<TD width="25">0</TD>
+<TD width="200">Normal or Impetuous</TD>
+</TR>
+<TR>
+<th width="150">Varangian Mercenary</th>
+<TD width="25">+1</TD>
+<TD width="200">Disciplined</TD>
+</TR>
+<TR>
+<th width="150">Swiss Mercenary</th>
+<TD width="25">+1</TD>
+<TD width="200">Disciplined or Impetuous</TD>
+</TR>
+<TR>
+<th width="150">Other Mercenary</th>
+<TD width="25">-2</TD>
+<TD width="200">Low</TD>
+</TR>
+<TR>
+<th width="150">Crusading/Jihad</th>
+<TD width="25">+2</TD>
+<TD width="200">Low or Impetuous</TD>
+</TR>
+<TR>
+<th width="150">Mounted</th>
+<TD width="25">+1</TD>
+<td width="200">&nbsp;</td>
+</TR>
+<TR>
+<th width="150">Lancer</th>
+<TD width="25">0</TD>
+<td width="200">&nbsp;</td>
+</TR>
+<TR>
+<th width="150">Charger</th>
+<TD width="25">+1</TD>
+<td width="200">&nbsp;</td>
+</TR>
+<TR>
+<th width="150">Brawler</th>
+<TD width="25">+2</TD>
+<td width="200">&nbsp;</td>
+</TR>
+<TR>
+<th width="150">Skirmish</th>
+<TD width="25">-1</TD>
+<td width="200">&nbsp;</td>
+</TR>
+<TR>
+<th width="150">Missile</th>
+<TD width="25">-2</TD>
+<td width="200">&nbsp;</td>
+</TR>
+<TR>
+<th width="150">Reckless</th>
+<TD width="25">+1</TD>
+<TD width="200">Impetuous</TD>
+</TR>
+<TR>
+<th width="150">Bodyguard</th>
+<td width="25">&nbsp;</td>
+<TD width="200">Normal or Disciplined</TD>
+</TR>
+<TR>
+<th width="150">Desperate</th>
+<TD width="25">-2</TD>
+<TD width="200">Any</TD>
+</TR>
+<TR>
+<th width="150">Fanatic</th>
+<TD width="25">+1</TD>
+<TD width="200">Disciplined or more likely Impetuous</TD>
+</TR>
+</table>
+<BR>
+<h2>GENERAL DISCIPLINE GUIDE</h2>
+<h3>Late/Urban Professional</h3>
+
+<table border="1" cellpadding="2" cellspacing="0">
+<tr>
+<th>Quality</th>
+<th>Missle</th>
+<th>Skirmish</th>
+<th>Melee</th>
+</tr>
+<TR>
+<th>Militia</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Low</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Normal</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>Low</TD>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+</table>
+<br>
+
+
+<h3>Other</h3>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Quality</th>
+<th>Missile</th>
+<th>Skirmish</th>
+<th>Melee</th>
+</TR>
+
+<TR>
+<th>Militia</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Low</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Low</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Normal</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>Low</TD>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+</table>
+<br>
+<h2>MAXIMUM DISCIPLINE GUIDE</h2>
+<h3>Late/Urban Professional</h3>
+<table border="1" cellpadding="2" cellspacing="0">
+
+<TR>
+<th>Quality</th>
+<th>Missile</th>
+<th>Skirmish</th>
+<th>Melee</th>
+</TR>
+
+<TR>
+<th>Militia</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Normal</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>Low</TD>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+</table>
+<br>
+
+<h3>Other</h3>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Quality</th>
+<th>Missile</th>
+<th>Skirmish</th>
+<th>Melee</th>
+</TR>
+
+<TR>
+<th>Militia</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Low</TD>
+</TR>
+<TR>
+<th>Average</th>
+<TD>Low</TD>
+<TD>Low</TD>
+<TD>Normal</TD>
+</TR>
+<TR>
+<th>Superior</th>
+<TD>Low</TD>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Elite</th>
+<TD>Normal</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+<TR>
+<th>Exceptional</th>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+<TD>Disciplined</TD>
+</TR>
+</table>
+
+
+<BR>
+<h2>GENERAL TRAINING LEVEL GUIDE</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Type</th>
+<th>Typical Level</th>
+<th>Maximum Level</th>
+</TR>
+<TR>
+<th>Feudal</th>
+<TD>untrained</TD>
+<TD>trained</TD>
+</TR>
+<TR>
+<th>Religious</th>
+<TD>trained</TD>
+<TD>highly_trained</TD>
+</TR>
+<TR>
+<th>Late Pro</th>
+<TD>trained</TD>
+<TD>highly_trained</TD>
+</TR>
+<TR>
+<th>Urban Pro</th>
+<TD>trained</TD>
+<TD>highly_trained</TD>
+</TR>
+<TR>
+<th>Early Pro</th>
+<TD>trained</TD>
+<TD>trained</TD>
+</TR>
+<TR>
+<th>Urban Militia</th>
+<TD>untrained</TD>
+<TD>trained</TD>
+</TR>
+<TR>
+<th>Local</th>
+<TD>untrained</TD>
+<TD>highly_trained (eg Mongol)</TD>
+</TR>
+<TR>
+<th>Rural Levy</th>
+<TD>untrained</TD>
+<TD>untrained</TD>
+</TR>
+<TR>
+<th>Mercenary</th>
+<TD>trained</TD>
+<TD>highly_trained</TD>
+</TR>
+</table>
+<br>
+<h2>GEOGRAPHICAL ORIGIN HEAT TABLE</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+<tr>
+<th>Unit Origin</th>
+<th>Heat Penalty</th>
+</TR>
+<TR>
+<th>Far Northern Europe</th>
+<TD>+3</TD>
+</TR>
+<TR>
+<th>Northern Europe, Cuman</th>
+<TD>+2</TD>
+</TR>
+<TR>
+<th>Northern Italy, Mongol</th>
+<TD>+1</TD>
+</TR>
+<TR>
+<th>Southern Europe, Byzantine</th>
+<TD>0</TD>
+</TR>
+<TR>
+<th>Turk, Kwarezm</th>
+<TD>-1</TD>
+</TR>
+<TR>
+<th>Egypt, Moor</th>
+<TD>-2</TD>
+</TR>
+</table>
+<br>
+<h2>STAT_GROUND TERRAIN MODIFIER VALUES (stat_ground scrub, sand, forest, snow)</h2>
+<table border="1" cellpadding="2" cellspacing="0">
+<TR>
+<th>Unit Origin</th>
+<th>Light Cavalry</th>
+<th>Light Infantry</th>
+<th>Medium Cavalry</th>
+<th>Medium Infantry</th>
+<th>Heavy Cavalry</th>
+<th>Heavy Infantry</th>
+</TR>
+
+<TR>
+<th>Far Northern Europe</th>
+<TD>0, -1, -2, 2</TD>
+<TD>1, -1, 3, 2</TD>
+<TD>-1, -2, -3, 1</TD>
+<TD>0, -2, 2, 1</TD>
+<TD>-2, -3, -4, 0</TD>
+<TD>-1, -3, 1, 0</TD>
+</TR>
+<TR>
+<th>Northern Europe, Cuman</th>
+<TD>0, -1, -2, 1</TD>
+<TD>1, -1, 3, 1</TD>
+<TD>-1, -2, -3, 0</TD>
+<TD>0, -2, 2, 0</TD>
+<TD>-2, -3, -4, -1</TD>
+<TD>-1, -3, 1, -1</TD>
+</TR>
+<TR>
+<th>Northern Italy, European merc</th>
+<TD>0, -1, -2, 0</TD>
+<TD>1, -1, 3, 0</TD>
+<TD>-1, -2, -3, -1</TD>
+<TD>0, -2, 2, -1</TD>
+<TD>-2, -3, -4, -2</TD>
+<TD>-1, -3, 1, -2</TD>
+</TR>
+<TR>
+<th>Mongol</th>
+<TD>0, -1, -3, 0</TD>
+<TD>1, 0, 2, 0</TD>
+<TD>-1, -2, -4, -1</TD>
+<TD>0, -1, 1, -1</TD>
+<TD>-2, -3, -5, -2</TD>
+<TD>-1, -2, 0, -2</TD>
+</TR>
+<TR>
+<th>Southern Europe, Byzantine</th>
+<TD>0, 0, -3, -1</TD>
+<TD>1, 0, 2, -1</TD>
+<TD>-1, -1, -4, -2</TD>
+<TD>0, -1, 1, -2</TD>
+<TD>-2, -2, -5, -3</TD>
+<TD>-1, -2, 0, -3</TD>
+</TR>
+<TR>
+<th>Turk, Kwarezm</th>
+<TD>0, 1, -4, -1</TD>
+<TD>1, 1, 1, -1</TD>
+<TD>-1, 0, -5, -2</TD>
+<TD>0, 0, 0, -2</TD>
+<TD>-2, -1, -6, -3</TD>
+<TD>-1, -1, -1, -3</TD>
+</TR>
+<TR>
+<th>Egypt, Moor</th>
+<TD>-1, 1, -4, -2</TD>
+<TD>0, 1, 1, -2</TD>
+<TD>-2, 0, -5, -3</TD>
+<TD>-1, 0, 0, -3</TD>
+<TD>-3, -1, -6, -4</TD>
+<TD>-2, -1, -1, -4</TD>
+</TR></table>
+<br>
+
+<em>Pikes an additional -1 in scrub.
+Pikes an additional -2 in forests, all other 2H weapons an additional -1 in forests.
+Terrain specialists an additional +1 in their chosen terrain, eg woodsmen, desert units.
+
+</em>
+<br>
+<br>
+<div id="ad_head"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Stainless-Steel Links Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-3444422587819362"
+     data-ad-slot="7245372184"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div id="footer">
+<a href="http://www.stainless-steel-mod.com">Home</a> |
+<a href="mailto:phil@nosaintshistory.com">Email</a> | 
+<a href="http://www.totalwar.com/index.html?page=/en/medieval2/index.html">Total War 2</a> |
+<a href="http://www.twcenter.net/forums/forumdisplay.php?f=314">Stainless Steel Mod</a> |
+<a href="http://www.twcenter.net/forums/forumdisplay.php?f=1397">R/C R/R Compilation Forum</a>
+ </div>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38550668-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--- UNDERDOGMEDIA EDGE_stainless-steel-mod.com JavaScript ADCODE START--->
+
+<script data-cfasync="false" language="javascript" async referrerpolicy="no-referrer-when-downgrade" src="https://udmserve.net/udm/img.fetch?sid=19583;tid=1;dt=6;"></script>
+
+<!--- UNDERDOGMEDIA EDGE_stainless-steel-mod.com JavaScript ADCODE END--->
+</BODY>
+</HTML>
+
