@@ -14,7 +14,7 @@ lowtarget=target.toLowerCase();
 if (lowtarget=="_self") {window.location=loc;}
 else {if (lowtarget=="_top") {top.location=loc;}
 else {if (lowtarget=="_blank") {window.open(loc);}
-else {parent.frames[target].location=loc;};
+else {if (lowtarget=="_parent") {parent.location=loc;}
 else {if (lowtarget=="_parent") {parent.location=loc;}
 }}}
 }
