@@ -15,7 +15,7 @@ if (lowtarget=="_self") {window.location=loc;}
 else {if (lowtarget=="_top") {top.location=loc;}
 else {if (lowtarget=="_blank") {window.open(loc);}
 else {if (lowtarget=="_parent") {parent.location=loc;}
-else {if (lowtarget=="_parent") {parent.location=loc;}
+else {parent.frames[target].location=loc;};
 }}}
 }
 function jump(menu)
