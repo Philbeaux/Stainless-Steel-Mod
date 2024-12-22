@@ -93,7 +93,9 @@ text-align: left;
  
  
  
- #units {   width: 430px; 
+ #units {   
+	        margin:40px 0;
+	        width: 430px; 
 	        height: 660px;
 			background-image: url(../images/factback.png); 
 	        border: 2px solid #000;
