@@ -1,6 +1,9 @@
 /***********************************************/
 /*   units_v_1.css --- created a header ad                          */
-/*         */
+/*   Removed Carbon Blue CSS
+     Added UnderDog In Page Ad Container CSS
+
+*/
 /***********************************************/
 
 
@@ -486,19 +489,21 @@ p#merc_comm  { font-size: .9em; font-style: italic; width: 80%; text-align: cent
 
 .note { font: italic .75em/1em Verdana, Arial, Helvetica, sans-serif; }
 
+/***********Under Dog In Page Ads ****************************/
 
-/*****************Carbon Blue Ads *****************************/
-
-.cb_ad { 
-        margin: 80px 0 40px 0; 
-		padding:30px;
-        }
-		
-		
-		.cb_ad_v1 { 
-        margin: 0 auto; 
-		padding:40px;
-        }
-		
+.in_page-ad-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px; /* Adjust this value to control space from top */
+  }
+  
+  in_page-.ad {
+	width: 1000px;
+	height: 300px;
+	/* Optional styles for visualization */
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+  }
 		
 		
