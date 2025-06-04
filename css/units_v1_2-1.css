@@ -304,7 +304,7 @@ font-family: Arial,sans-serif;
 	margin-left: auto;
 }
 #level_5 ul.multi_build li.recruit_comm  p { font-size: .7em; margin: 10px 5px; padding: 0; font-weight: bold; }
-
+#level_5 ul.multi_build li.recruit_comm  p em { padding: 25px 8px; font-weight: normal; }
 
 /* *************************************************************************************************** */
 
