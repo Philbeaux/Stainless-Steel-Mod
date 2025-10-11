@@ -1,5 +1,3 @@
-google.com, pub-3444422587819362, DIRECT, f08c47fec0942fa0
-
 #ads.txt stainless-steel-mod.com
 
 #updated 10.11.2025
